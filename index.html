@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience top-notch laundry services at Lakeside Laundry Service, Pokhara. We offer affordable, convenient, and efficient laundry solutions for locals and tourists. Fast turnaround time and quality cleaning for all your garments.">
+    <meta name="keywords" content="laundry near me pokhara, laundry service, Lakeside laundry, Pokhara laundry, wash and fold, dry cleaning, affordable laundry, laundry for tourists, laundry pickup and delivery, fabric care">
+    <title>Lakeside Laundry Service</title>
+    <link rel="stylesheet" href="hcss.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .title {
+            text-align: center;
+            background-color: #2196F3;
+            color: white;
+            padding: 15px;
+        }
+
+        nav {
+            background-color: #2196F3;
+            position: relative;
+        }
+
+        nav ul {
+            display: none; /* Hide menu by default */
+            flex-direction: column; /* Stack menu items vertically */
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 5px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #1976D2;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .bar {
+            height: 3px;
+            width: 30px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .whatsapp_float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp_float img {
+            width: 80px;
+            height: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+
+        /* Media query for mobile responsiveness */
+        @media (max-width: 768px) {
+            .title h1, .title h2 {
+                font-size: 1.5em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hamburger {
+                display: flex; /* Show hamburger on smaller screens */
+            }
+
+            .whatsapp_float img {
+                width: 60px;
+            }
+
+            section {
+                padding: 15px;
+                margin: 5px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            nav ul {
+                display: flex; /* Show menu items in a row on larger screens */
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            nav ul {
+                display: flex; /* Show the menu items */
+            }
+
+            .hamburger {
+                display: none; /* Hide hamburger on larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        <header>
+            <h1>Welcome to Lakeside Laundry Service</h1>
+            <p>We offer 3-hour, 6-hour, 12-hour, and 24-hour services.</p>
+            <div class="num"><h2>Call Us at +977 9846481293</h2></div>
+        </header>
+    </div>
+    
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="express.html">Pricing</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="map.html">Map</a></li>
+        </ul>
+    </nav>    
+
+    <section id="about">
+        <h2>About Lakeside Laundry Service</h2>
+        <p>Your trusted laundry partner in Lakeside, Pokhara. We provide a full range of laundry services, including wash and fold, dry cleaning, and special fabric care. Our dedicated team ensures that your clothes are cleaned with the utmost care and attention.</p>
+    </section>
+
+    <section id="lakeside">
+        <img src="lobby1.png" alt="laundry near me pokhara laundry service, Lakeside laundry, Pokhara laundry, wash and fold, dry cleaning, affordable laundry, laundry for tourists, laundry pickup and delivery, fabric carelaundry partner in Lakeside, Pokhara.Lakeside Laundry Service lobby image 1Lakeside Laundry Service lobby image 1">
+        <img src="lobby2.png" alt="laundry near me pokhara laundry service, Lakeside laundry, Pokhara laundry, wash and fold, dry cleaning, affordable laundry, laundry for tourists, laundry pickup and delivery, fabric carelaundry partner in Lakeside, Pokhara.Lakeside Laundry Service lobby image 1Lakeside Laundry Service lobby image 2">
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Wash and Fold</li>
+            <li>Dry Cleaning</li>
+            <li>Ironing Services</li>
+            <li>Pickup and Delivery</li>
+            <li>Fabric Care for Delicate Items</li>
+        </ul>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <p>We offer competitive prices for all our services. Check out our pricing page for detailed information on our laundry services and packages.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need assistance, please fill out the form below to get in touch with us!</p>
+        
+        <form id="contact-form" action="mailto:buyandrenttrekkingitems@gmail.com" method="post" enctype="text/plain">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +977 9846481293</p>
+            <p><strong>Email:</strong> hellolakesidelaundry@gmail.com</p>
+            <p><strong>Location:</strong> Lakeside, Pokhara, Nepal</p>
+        </div>
+    </section>
+
+    <div class="whatsapp_float">
+        <a href="https://wa.me/9779846481293">
+            <img src="whatsappmetamarkzukerburg.png" alt="Contact us on WhatsApp">
+        </a>
+    </div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d261.3276374598469!2d83.96485582631348!3d28.207568503916857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995955cf6b14d5d%3A0x3584c35c527e0785!2sLakeside%20laundry%20services!5e0!3m2!1sne!2snp!4v1730021448386!5m2!1sne!2snp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex'; // Toggle menu visibility
+        }
+    </script>
+</body>
+</html>
+
+
