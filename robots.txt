@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /private/
+Disallow: /temporary/
+
+Sitemap: https://balkrishnasubedi90.com.np/sitemap.xml
