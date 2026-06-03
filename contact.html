@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Nepal Trek Connect – Book your Himalayan trek, get a custom quote, or ask about paragliding, kayaking, ziplining and Chitwan safari from Lakeside, Pokhara.">
+  <meta name="keywords" content="contact Nepal Trek Connect, book Nepal trek, Pokhara trekking inquiry, Nepal adventure booking">
+  <title>Contact & Booking | Nepal Trek Connect – Lakeside, Pokhara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-hero { background: linear-gradient(135deg, var(--clr-forest) 0%, var(--clr-slate) 100%); padding: calc(var(--header-h) + 60px) 0 80px; position: relative; overflow: hidden; }
+    .contact-hero::after { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 30 L30 0 L60 30 L30 60Z' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'/%3E%3C/svg%3E"); }
+    .contact-hero__inner { position: relative; z-index: 1; }
+    .contact-hero h1 { font-family: var(--font-display); font-size: clamp(2.4rem,5vw,3.8rem); font-weight: 900; color: var(--clr-offwhite); line-height: 1.1; margin-bottom: 16px; }
+    .contact-hero p { font-size: 1.1rem; color: rgba(245,242,235,0.7); max-width: 560px; line-height: 1.7; }
+
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 56px; align-items: start; }
+    .contact-info-card { background: #fff; border-radius: var(--radius-lg); padding: 36px; box-shadow: var(--shadow-card); position: sticky; top: calc(var(--header-h) + 24px); }
+    .contact-info-card h3 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 8px; }
+    .contact-info-card > p { color: var(--clr-muted); font-size: 0.9rem; margin-bottom: 28px; line-height: 1.7; }
+
+    .cinfo-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 22px; }
+    .cinfo-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(82,183,136,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .cinfo-label { font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: .1em; color: var(--clr-muted); margin-bottom: 2px; }
+    .cinfo-val { font-weight: 600; font-size: 0.92rem; color: var(--clr-slate); }
+    .cinfo-val a { color: var(--clr-forest); transition: var(--transition); }
+    .cinfo-val a:hover { color: var(--clr-lime); }
+
+    .wa-cta { display: flex; align-items: center; gap: 12px; background: #25D366; color: #fff; border-radius: var(--radius-md); padding: 14px 20px; font-weight: 700; font-size: 0.92rem; transition: var(--transition); margin-top: 8px; }
+    .wa-cta:hover { background: #1DA851; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.35); }
+    .wa-cta svg { flex-shrink: 0; }
+
+    .booking-form-wrap { background: #fff; border-radius: var(--radius-lg); padding: 40px; box-shadow: var(--shadow-card); }
+    .booking-form-wrap h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 8px; }
+    .booking-form-wrap > p { color: var(--clr-muted); margin-bottom: 32px; font-size: 0.95rem; }
+
+    .form-section-title { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--clr-lime); font-weight: 700; margin: 28px 0 16px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.06); }
+    .form-section-title:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+
+    .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .fgrid--full { grid-column: 1/-1; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 0.82rem; font-weight: 600; color: var(--clr-slate); }
+    .form-group label span { color: var(--clr-danger); }
+    .form-group input, .form-group select, .form-group textarea {
+      padding: 12px 16px; border: 1.5px solid rgba(0,0,0,0.1); border-radius: var(--radius-sm);
+      font-size: 0.9rem; transition: var(--transition); background: var(--clr-offwhite); color: var(--clr-slate);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: var(--clr-lime); background: #fff; box-shadow: 0 0 0 3px rgba(82,183,136,0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .trek-select-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 4px; }
+    .trek-select-btn { padding: 10px 12px; border: 1.5px solid rgba(0,0,0,0.1); border-radius: var(--radius-sm); background: var(--clr-offwhite); cursor: pointer; font-size: 0.78rem; font-weight: 600; text-align: center; transition: var(--transition); color: var(--clr-slate); line-height: 1.3; }
+    .trek-select-btn:hover { border-color: var(--clr-lime); color: var(--clr-forest); }
+    .trek-select-btn.selected { border-color: var(--clr-lime); background: rgba(82,183,136,0.12); color: var(--clr-forest); }
+
+    .submit-row { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
+    .submit-note { font-size: 0.78rem; color: var(--clr-muted); text-align: center; line-height: 1.6; }
+
+    .form-success { display: none; padding: 16px 20px; background: rgba(82,183,136,0.12); border: 1px solid rgba(82,183,136,0.3); border-radius: var(--radius-sm); color: var(--clr-forest); font-weight: 600; font-size: 0.9rem; margin-top: 12px; }
+    .form-success.show { display: block; }
+    .form-error { display: none; padding: 12px 16px; background: rgba(224,85,85,0.1); border: 1px solid rgba(224,85,85,0.3); border-radius: var(--radius-sm); color: var(--clr-danger); font-size: 0.85rem; font-weight: 600; margin-top: 10px; }
+    .form-error.show { display: block; }
+
+    .hours-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(82,183,136,0.12); color: var(--clr-forest); font-size: 0.78rem; font-weight: 700; font-family: var(--font-mono); letter-spacing:.05em; padding: 6px 12px; border-radius: 99px; margin-bottom: 20px; }
+    .dot-green { width: 8px; height: 8px; background: var(--clr-lime); border-radius: 50%; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+
+    @media(max-width:900px){ .contact-layout{grid-template-columns:1fr} .contact-info-card{position:static} }
+    @media(max-width:600px){ .fgrid{grid-template-columns:1fr} .trek-select-grid{grid-template-columns:1fr 1fr} }
+  </style>
+</head>
+<body>
+
+<header class="site-header transparent" role="banner">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo" aria-label="Nepal Trek Connect Home">
+        <span class="logo-icon" aria-hidden="true">⛰️</span>
+        <span>Nepal Trek Connect<span class="logo-sub">Lakeside · Pokhara</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treks.html">Treks</a></li>
+        <li><a href="adventures.html">Adventures</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        <li><a href="contact.html" class="btn btn--primary btn--sm">Book Now</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+  <button class="close-menu" aria-label="Close mobile menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="treks.html">Treks</a>
+  <a href="adventures.html">Adventures</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn--primary" style="margin-top:16px">Book Now</a>
+</nav>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="contact-hero" aria-labelledby="contact-hero-heading">
+  <div class="container contact-hero__inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Contact & Book</span>
+    </nav>
+    <span class="eyebrow">📋 Get In Touch</span>
+    <h1 id="contact-hero-heading">Book Your<br>Himalayan Adventure</h1>
+    <p>Fill in the form below and our team will reply within 2 hours. We'll craft a custom itinerary tailored to your fitness level, budget, and dates.</p>
+  </div>
+</section>
+
+<!-- MAIN CONTACT SECTION -->
+<section class="section section--offwhite" aria-label="Contact and booking form">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- INFO SIDEBAR -->
+      <aside class="contact-info-card" aria-label="Contact information">
+        <span class="hours-badge"><span class="dot-green"></span> Open Daily 6am–8pm</span>
+        <h3>Nepal Trek Connect</h3>
+        <p>Expert Himalayan adventures from Lakeside, Pokhara. Licensed guides, best prices, unforgettable memories since 2010.</p>
+
+        <div class="cinfo-item">
+          <div class="cinfo-icon">📞</div>
+          <div>
+            <div class="cinfo-label">Phone / WhatsApp</div>
+            <div class="cinfo-val"><a href="tel:+9779846958184">+977 984 695 8184</a></div>
+            <div class="cinfo-val"><a href="tel:+9779846076397">+977 984 607 6397</a></div>
+          </div>
+        </div>
+
+        <div class="cinfo-item">
+          <div class="cinfo-icon">✉️</div>
+          <div>
+            <div class="cinfo-label">Email</div>
+            <div class="cinfo-val"><a href="mailto:nepaltrekconnect@gmail.com">nepaltrekconnect@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div class="cinfo-item">
+          <div class="cinfo-icon">📍</div>
+          <div>
+            <div class="cinfo-label">Location</div>
+            <div class="cinfo-val">Lakeside, Pokhara<br>Gandaki Province, Nepal</div>
+          </div>
+        </div>
+
+        <div class="cinfo-item">
+          <div class="cinfo-icon">🕐</div>
+          <div>
+            <div class="cinfo-label">Response Time</div>
+            <div class="cinfo-val">Within 2 hours</div>
+          </div>
+        </div>
+
+        <a href="https://wa.me/9779846958184?text=Hello%20Nepal%20Trek%20Connect!%20I%20would%20like%20to%20book%20an%20adventure."
+           target="_blank" rel="noopener noreferrer" class="wa-cta" aria-label="Chat on WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.478 2 2 6.478 2 11.999c0 1.906.506 3.692 1.385 5.234L2 22l4.893-1.363A9.935 9.935 0 0012 22c5.521 0 10-4.479 10-10.001C22 6.478 17.521 2 11.999 2zm.001 18.001a8 8 0 01-4.08-1.116l-.292-.173-3.026.843.844-3.025-.193-.305A7.987 7.987 0 014 12C4 7.582 7.582 4 12 4c4.42 0 8 3.581 8 7.999 0 4.42-3.58 8.002-8 8.002z"/></svg>
+          Chat on WhatsApp Now
+        </a>
+
+        <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.07);">
+          <p style="font-size:.78rem;color:var(--clr-muted);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;font-weight:700;">We Accept</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span class="tag">USD</span>
+            <span class="tag">EUR</span>
+            <span class="tag">NPR</span>
+            <span class="tag">Cash</span>
+            <span class="tag">Card</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- BOOKING FORM -->
+      <div class="booking-form-wrap">
+        <h2>Send Your Inquiry</h2>
+        <p>Complete the form and we'll reply with a personalised itinerary and quote. No commitment required.</p>
+
+        <form id="main-booking-form" novalidate aria-label="Booking inquiry form">
+          <p class="form-section-title">Your Details</p>
+          <div class="fgrid">
+            <div class="form-group">
+              <label for="name">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="jane@email.com" autocomplete="email" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="nationality">Nationality</label>
+              <input type="text" id="nationality" name="nationality" placeholder="e.g. American">
+            </div>
+          </div>
+
+          <p class="form-section-title">Trip Details</p>
+          <div class="form-group fgrid--full" style="margin-bottom:16px">
+            <label>Activity Interested In</label>
+            <div class="trek-select-grid" role="group" aria-label="Select activity">
+              <button type="button" class="trek-select-btn" data-val="Everest Base Camp Trek">Everest Base Camp</button>
+              <button type="button" class="trek-select-btn" data-val="Annapurna Circuit Trek">Annapurna Circuit</button>
+              <button type="button" class="trek-select-btn" data-val="Annapurna Base Camp Trek">Annapurna Base Camp</button>
+              <button type="button" class="trek-select-btn" data-val="Poon Hill Trek">Poon Hill Trek</button>
+              <button type="button" class="trek-select-btn" data-val="Manaslu Circuit Trek">Manaslu Circuit</button>
+              <button type="button" class="trek-select-btn" data-val="Langtang Valley Trek">Langtang Valley</button>
+              <button type="button" class="trek-select-btn" data-val="Upper Mustang Trek">Upper Mustang</button>
+              <button type="button" class="trek-select-btn" data-val="Mardi Himal Trek">Mardi Himal</button>
+              <button type="button" class="trek-select-btn" data-val="Paragliding">Paragliding</button>
+              <button type="button" class="trek-select-btn" data-val="Kayaking">Kayaking</button>
+              <button type="button" class="trek-select-btn" data-val="Ziplining">Ziplining</button>
+              <button type="button" class="trek-select-btn" data-val="Chitwan Safari">Chitwan Safari</button>
+            </div>
+            <input type="hidden" id="activity" name="activity" value="">
+          </div>
+
+          <div class="fgrid">
+            <div class="form-group">
+              <label for="travel_date">Preferred Start Date</label>
+              <input type="date" id="travel_date" name="travel_date">
+            </div>
+            <div class="form-group">
+              <label for="group_size">Group Size</label>
+              <select id="group_size" name="group_size">
+                <option value="">Select…</option>
+                <option value="Solo (1 person)">Solo (1 person)</option>
+                <option value="Couple (2 people)">Couple (2)</option>
+                <option value="Small group (3–5)">Small group (3–5)</option>
+                <option value="Group (6–10)">Group (6–10)</option>
+                <option value="Large group (10+)">Large group (10+)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="budget">Budget Range (per person)</label>
+              <select id="budget" name="budget">
+                <option value="">Select…</option>
+                <option value="Under $500">Under $500</option>
+                <option value="$500–$1,000">$500–$1,000</option>
+                <option value="$1,000–$2,000">$1,000–$2,000</option>
+                <option value="$2,000+">$2,000+</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fitness">Fitness Level</label>
+              <select id="fitness" name="fitness">
+                <option value="">Select…</option>
+                <option value="Beginner – occasional walks">Beginner</option>
+                <option value="Moderate – regular hiker">Moderate</option>
+                <option value="Fit – frequent trekker">Fit</option>
+                <option value="Very fit – experienced mountaineer">Very fit</option>
+              </select>
+            </div>
+            <div class="form-group fgrid--full">
+              <label for="message">Additional Requirements or Questions</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about any dietary requirements, medical conditions, special requests, or questions you have…"></textarea>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center;font-size:1rem;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Booking Inquiry
+            </button>
+            <p class="submit-note">📧 Your message will open in your email client addressed to nepaltrekconnect@gmail.com. We respond within 2 hours during business hours (6am–8pm Nepal time).</p>
+          </div>
+          <div class="form-success" role="alert" aria-live="polite"></div>
+          <div class="form-error" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ STRIP -->
+<section class="section section--white" aria-label="Frequently asked questions">
+  <div class="container" style="max-width:800px">
+    <div class="section-header section-header--center fade-up">
+      <span class="eyebrow">❓ FAQ</span>
+      <h2 class="section-title">Common Questions</h2>
+    </div>
+    <div class="fade-up" style="display:flex;flex-direction:column;gap:16px">
+      <details style="background:var(--clr-offwhite);border-radius:var(--radius-md);padding:20px 24px;cursor:pointer">
+        <summary style="font-weight:700;font-size:0.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">How far in advance should I book? <span style="color:var(--clr-lime)">+</span></summary>
+        <p style="margin-top:12px;color:var(--clr-muted);font-size:0.9rem;line-height:1.7">For popular routes like EBC and Annapurna Circuit, we recommend booking at least 3–4 weeks ahead during peak season (Oct–Nov, Mar–Apr). Poon Hill and shorter treks can often be arranged with just a few days' notice.</p>
+      </details>
+      <details style="background:var(--clr-offwhite);border-radius:var(--radius-md);padding:20px 24px;cursor:pointer">
+        <summary style="font-weight:700;font-size:0.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">What is included in the price? <span style="color:var(--clr-lime)">+</span></summary>
+        <p style="margin-top:12px;color:var(--clr-muted);font-size:0.9rem;line-height:1.7">All packages include a licensed English-speaking guide, porter (up to 10kg), teahouse accommodation, all permits (TIMS, National Park, Conservation Area), airport transfers, and a first aid kit. International flights and personal gear are not included.</p>
+      </details>
+      <details style="background:var(--clr-offwhite);border-radius:var(--radius-md);padding:20px 24px;cursor:pointer">
+        <summary style="font-weight:700;font-size:0.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">Do you offer custom itineraries? <span style="color:var(--clr-lime)">+</span></summary>
+        <p style="margin-top:12px;color:var(--clr-muted);font-size:0.9rem;line-height:1.7">Absolutely! Every trek can be customised to your pace, interests, and schedule. We specialise in tailor-made itineraries and can combine trekking with paragliding, kayaking, or a Chitwan safari.</p>
+      </details>
+      <details style="background:var(--clr-offwhite);border-radius:var(--radius-md);padding:20px 24px;cursor:pointer">
+        <summary style="font-weight:700;font-size:0.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center">Is travel insurance required? <span style="color:var(--clr-lime)">+</span></summary>
+        <p style="margin-top:12px;color:var(--clr-muted);font-size:0.9rem;line-height:1.7">Yes, travel insurance with helicopter rescue coverage is mandatory for all high-altitude treks (above 3,000m). We can provide recommendations for reputable insurance providers.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Nepal Trek Connect home">
+          <span class="logo-icon" aria-hidden="true">⛰️</span>
+          <span>Nepal Trek Connect<span class="logo-sub">Lakeside · Pokhara · Nepal</span></span>
+        </a>
+        <p>Your trusted partner for Himalayan trekking adventures, paragliding, kayaking, ziplining and Chitwan wildlife safaris. Making dreams come true since 2010.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/9779846958184" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">💬</a>
+          <a href="mailto:nepaltrekconnect@gmail.com" class="social-link" aria-label="Email">📧</a>
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Our Treks</h4>
+        <ul class="footer-links">
+          <li><a href="treks.html">Everest Base Camp</a></li>
+          <li><a href="treks.html">Annapurna Circuit</a></li>
+          <li><a href="treks.html">Annapurna Base Camp</a></li>
+          <li><a href="treks.html">Poon Hill Trek</a></li>
+          <li><a href="treks.html">All Trekking Routes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Adventures</h4>
+        <ul class="footer-links">
+          <li><a href="adventures.html">Paragliding Pokhara</a></li>
+          <li><a href="adventures.html">Kayaking Nepal</a></li>
+          <li><a href="adventures.html">Zipline Pokhara</a></li>
+          <li><a href="adventures.html">Chitwan Safari</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+9779846958184">📞 +977 984 695 8184</a></li>
+          <li><a href="tel:+9779846076397">📞 +977 984 607 6397</a></li>
+          <li><a href="mailto:nepaltrekconnect@gmail.com">✉️ nepaltrekconnect@gmail.com</a></li>
+          <li><a href="https://wa.me/9779846958184" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Nepal Trek Connect. All rights reserved. | Lakeside, Pokhara, Nepal</p>
+      <p>Nepal Tourism Board Registered · Eco-Responsible Adventure Tourism</p>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY WHATSAPP (always visible) -->
+<a href="https://wa.me/9779846958184?text=Hello%20Nepal%20Trek%20Connect!%20I%20would%20like%20to%20enquire%20about%20your%20adventure%20packages."
+   target="_blank" rel="noopener noreferrer"
+   class="wa-sticky-btn"
+   aria-label="Chat on WhatsApp"
+   title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.478 2 2 6.478 2 11.999c0 1.906.506 3.692 1.385 5.234L2 22l4.893-1.363A9.935 9.935 0 0012 22c5.521 0 10-4.479 10-10.001C22 6.478 17.521 2 11.999 2zm.001 18.001a8 8 0 01-4.08-1.116l-.292-.173-3.026.843.844-3.025-.193-.305A7.987 7.987 0 014 12C4 7.582 7.582 4 12 4c4.42 0 8 3.581 8 7.999 0 4.42-3.58 8.002-8 8.002z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script src="app.js" defer></script>
+<script>
+// Trek selector buttons
+document.querySelectorAll('.trek-select-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.trek-select-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    document.getElementById('activity').value = btn.dataset.val;
+  });
+});
+
+// Pre-select from URL param
+const params = new URLSearchParams(window.location.search);
+const trekParam = params.get('trek');
+if (trekParam) {
+  const match = document.querySelector(`.trek-select-btn[data-val*="${trekParam.replace(/-/g,' ')}"]`);
+  if (match) { match.click(); match.scrollIntoView({behavior:'smooth',block:'center'}); }
+}
+
+// Booking form submit → mailto
+document.getElementById('main-booking-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const fd = new FormData(this);
+  const name    = (fd.get('name') || '').trim();
+  const email   = (fd.get('email') || '').trim();
+  const phone   = (fd.get('phone') || '').trim();
+  const nationality = (fd.get('nationality') || '').trim();
+  const activity    = (fd.get('activity') || '').trim();
+  const date    = (fd.get('travel_date') || '').trim();
+  const group   = (fd.get('group_size') || '').trim();
+  const budget  = (fd.get('budget') || '').trim();
+  const fitness = (fd.get('fitness') || '').trim();
+  const message = (fd.get('message') || '').trim();
+
+  const errEl = this.querySelector('.form-error');
+  const sucEl = this.querySelector('.form-success');
+
+  if (!name || !email) {
+    errEl.textContent = 'Please fill in your name and email.';
+    errEl.classList.add('show');
+    sucEl.classList.remove('show');
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.textContent = 'Please enter a valid email address.';
+    errEl.classList.add('show');
+    sucEl.classList.remove('show');
+    return;
+  }
+
+  errEl.classList.remove('show');
+
+  const subject = encodeURIComponent(`Trek Inquiry from ${name}${activity ? ' – ' + activity : ''}`);
+  const body = encodeURIComponent(
+    `Hello Nepal Trek Connect,\n\nI would like to inquire about booking an adventure.\n\n` +
+    `Name: ${name}\n` +
+    `Email: ${email}\n` +
+    (phone ? `Phone/WhatsApp: ${phone}\n` : '') +
+    (nationality ? `Nationality: ${nationality}\n` : '') +
+    (activity ? `Activity: ${activity}\n` : '') +
+    (date ? `Preferred Date: ${date}\n` : '') +
+    (group ? `Group Size: ${group}\n` : '') +
+    (budget ? `Budget: ${budget}\n` : '') +
+    (fitness ? `Fitness Level: ${fitness}\n` : '') +
+    (message ? `\nAdditional Info:\n${message}\n` : '') +
+    `\nKind regards,\n${name}`
+  );
+
+  window.location.href = `mailto:nepaltrekconnect@gmail.com?subject=${subject}&body=${body}`;
+
+  sucEl.innerHTML = '✓ Your email client has opened! Send the message to complete your inquiry. We\'ll reply within 2 hours.';
+  sucEl.classList.add('show');
+});
+</script>
+</body>
+</html>

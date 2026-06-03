@@ -3,36 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Complete Nepal trekking directory from Nepal Trek Connect Pokhara. Everest Base Camp, Annapurna Circuit, Poon Hill, Manaslu Circuit, Langtang Valley & more. Filter by difficulty, duration and price.">
-  <meta name="keywords" content="Nepal trekking routes, best treks Nepal, Everest Base Camp trek package, Annapurna Circuit trek guide, Poon Hill trek cost, Manaslu Circuit restricted area, Langtang Valley trek, Nepal hiking packages price">
-  <meta name="author" content="Nepal Trek Connect">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Nepal Trekking Packages | All Routes & Prices | Nepal Trek Connect">
-  <meta property="og:description" content="Browse all Nepal trekking routes with pricing, difficulty ratings and expert guides. Everest Base Camp, Annapurna, Poon Hill & more from Lakeside Pokhara.">
-  <link rel="canonical" href="https://nepaltrekconnect.com/treks.html">
+  <meta name="description" content="Complete Nepal trekking directory – Everest Base Camp, Annapurna Circuit, Poon Hill, Manaslu, Langtang & more. Filter by difficulty, duration and price. Nepal Trek Connect, Lakeside Pokhara.">
+  <meta name="keywords" content="Nepal trekking routes, best treks Nepal, Everest Base Camp trek package, Annapurna Circuit trek, Poon Hill trek, Manaslu Circuit, Langtang Valley, Nepal hiking packages">
   <title>Nepal Trekking Packages | All Routes & Prices | Nepal Trek Connect Pokhara</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ---- Trek Cards ---- */
+    .cards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .trek-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    .trek-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-float); }
+    .trek-card:focus-visible { outline: 3px solid var(--clr-lime); outline-offset: 3px; }
+    .trek-card__img { position: relative; overflow: hidden; height: 220px; }
+    .trek-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+    .trek-card:hover .trek-card__img img { transform: scale(1.06); }
+    .trek-card__badge { position: absolute; top: 14px; left: 14px; z-index: 2; }
+    .trek-card__price { position: absolute; bottom: 14px; right: 14px; background: rgba(10,24,18,0.85); backdrop-filter: blur(6px); color: var(--clr-gold); font-family: var(--font-mono); font-weight: 700; font-size: 0.85rem; padding: 6px 14px; border-radius: 99px; letter-spacing:.03em; }
+    .trek-card__body { padding: 24px; }
+    .trek-card__title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 900; margin-bottom: 8px; line-height: 1.2; color: var(--clr-slate); }
+    .trek-card__desc { font-size: 0.85rem; color: var(--clr-muted); line-height: 1.6; margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .trek-card__meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .trek-card__meta-item { display: flex; align-items: center; gap: 5px; font-size: 0.78rem; font-weight: 600; color: var(--clr-muted); font-family: var(--font-mono); }
+    .trek-card__meta-item svg { width: 14px; height: 14px; color: var(--clr-lime); flex-shrink: 0; }
+    .trek-card__cta { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(0,0,0,0.06); }
+    .trek-card__view { font-size: 0.8rem; font-weight: 700; color: var(--clr-lime); font-family: var(--font-mono); letter-spacing:.06em; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
+    .trek-card__view svg { width: 14px; height: 14px; transition: transform 0.2s; }
+    .trek-card:hover .trek-card__view svg { transform: translateX(3px); }
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Nepal Trekking Packages by Nepal Trek Connect",
-    "description": "Comprehensive list of Nepal trekking routes with pricing and details from Nepal Trek Connect, Lakeside Pokhara.",
-    "numberOfItems": 9,
-    "itemListElement": [
-      {"@type":"ListItem","position":1,"item":{"@type":"TouristTrip","name":"Everest Base Camp Trek","description":"14-day classic trek to EBC at 5364m","url":"https://nepaltrekconnect.com/treks.html#ebc"}},
-      {"@type":"ListItem","position":2,"item":{"@type":"TouristTrip","name":"Annapurna Circuit Trek","description":"14-day circumnavigation of Annapurna massif","url":"https://nepaltrekconnect.com/treks.html#ac"}},
-      {"@type":"ListItem","position":3,"item":{"@type":"TouristTrip","name":"Annapurna Base Camp Trek","description":"10-day trek to the Annapurna Sanctuary at 4130m","url":"https://nepaltrekconnect.com/treks.html#abc"}},
-      {"@type":"ListItem","position":4,"item":{"@type":"TouristTrip","name":"Poon Hill Ghorepani Trek","description":"5-day beginner-friendly sunrise trek to 3210m","url":"https://nepaltrekconnect.com/treks.html#poon-hill"}},
-      {"@type":"ListItem","position":5,"item":{"@type":"TouristTrip","name":"Manaslu Circuit Trek","description":"14-day restricted-area trek around world 8th highest mountain","url":"https://nepaltrekconnect.com/treks.html#manaslu"}},
-      {"@type":"ListItem","position":6,"item":{"@type":"TouristTrip","name":"Langtang Valley Trek","description":"7-day Valley of Glaciers trek near Kathmandu","url":"https://nepaltrekconnect.com/treks.html#langtang"}}
-    ]
-  }
-  </script>
+    /* ---- TREK MODAL ---- */
+    .trek-modal-overlay {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(8,18,14,0.85); backdrop-filter: blur(6px);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding: 24px 16px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s ease;
+      overflow-y: auto;
+    }
+    .trek-modal-overlay.open { opacity: 1; pointer-events: auto; }
+    .trek-modal {
+      background: #fff; border-radius: var(--radius-xl);
+      width: 100%; max-width: 860px;
+      position: relative;
+      transform: translateY(40px) scale(0.97);
+      transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+      overflow: hidden;
+      margin: auto;
+    }
+    .trek-modal-overlay.open .trek-modal { transform: none; }
+
+    .trek-modal__close {
+      position: absolute; top: 18px; right: 18px; z-index: 10;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
+      border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.1rem; line-height: 1; transition: background 0.2s;
+    }
+    .trek-modal__close:hover { background: rgba(0,0,0,0.75); }
+
+    /* Hero image */
+    .trek-modal__hero { position: relative; height: 340px; overflow: hidden; }
+    .trek-modal__hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .trek-modal__hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,18,14,0.8) 0%, transparent 60%); }
+    .trek-modal__hero-info { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px 32px; }
+    .trek-modal__hero-info h2 { font-family: var(--font-display); font-size: clamp(1.6rem,3vw,2.2rem); font-weight: 900; color: #fff; margin-bottom: 8px; }
+    .trek-modal__hero-meta { display: flex; flex-wrap: wrap; gap: 10px; }
+    .trek-modal__hero-meta span { display: inline-flex; align-items: center; gap: 5px; font-size: 0.78rem; font-family: var(--font-mono); font-weight: 700; color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.12); backdrop-filter: blur(4px); padding: 4px 12px; border-radius: 99px; }
+
+    /* Photo gallery */
+    .trek-modal__gallery-label { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing:.12em; color: var(--clr-muted); font-weight: 700; padding: 24px 32px 12px; }
+    .trek-modal__gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; padding: 0 32px; }
+    .trek-modal__gallery img { width: 100%; height: 140px; object-fit: cover; border-radius: var(--radius-sm); cursor: pointer; transition: transform 0.25s ease, opacity 0.2s; display: block; }
+    .trek-modal__gallery img:hover { transform: scale(1.03); opacity: 0.9; }
+
+    /* Body content */
+    .trek-modal__body { padding: 28px 32px; }
+    .trek-modal__desc { font-size: 0.95rem; color: var(--clr-muted); line-height: 1.8; margin-bottom: 24px; }
+
+    .trek-modal__specs { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-bottom: 24px; }
+    .trek-spec { background: var(--clr-offwhite); border-radius: var(--radius-sm); padding: 14px 16px; }
+    .trek-spec__label { font-family: var(--font-mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing:.1em; color: var(--clr-muted); margin-bottom: 4px; }
+    .trek-spec__val { font-weight: 700; font-size: 0.9rem; color: var(--clr-slate); }
+
+    .trek-modal__section-title { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing:.1em; color: var(--clr-lime); font-weight: 700; margin-bottom: 12px; }
+    .trek-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 24px; }
+    .trek-hl-item { display: flex; gap: 8px; align-items: flex-start; font-size: 0.85rem; color: var(--clr-slate); }
+    .trek-hl-item::before { content: '✓'; color: var(--clr-lime); font-weight: 700; flex-shrink: 0; }
+
+    .itinerary-list { display: flex; flex-direction: column; gap: 0; margin-bottom: 24px; }
+    .itin-day { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+    .itin-day:last-child { border-bottom: none; }
+    .itin-day__num { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; color: var(--clr-lime); background: rgba(82,183,136,0.1); padding: 4px 8px; border-radius: 6px; flex-shrink: 0; align-self: flex-start; margin-top: 2px; }
+    .itin-day__text { font-size: 0.85rem; color: var(--clr-slate); line-height: 1.6; }
+    .itin-day__text strong { color: var(--clr-forest); display: block; font-size: 0.88rem; }
+
+    .trek-modal__actions { display: flex; gap: 12px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.07); }
+    .trek-modal__actions a { flex: 1; min-width: 160px; justify-content: center; }
+
+    /* Lightbox */
+    .lightbox-overlay {
+      position: fixed; inset: 0; z-index: 3000;
+      background: rgba(0,0,0,0.95);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s;
+    }
+    .lightbox-overlay.open { opacity: 1; pointer-events: auto; }
+    .lightbox-overlay img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: var(--radius-md); }
+    .lightbox-close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; line-height: 1; }
+    .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); border: none; color: #fff; font-size: 1.8rem; cursor: pointer; padding: 12px 16px; border-radius: var(--radius-sm); transition: background 0.2s; }
+    .lightbox-prev { left: 16px; }
+    .lightbox-next { right: 16px; }
+    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.2); }
+
+    @media(max-width:1024px){ .cards-grid{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:640px){
+      .cards-grid{grid-template-columns:1fr}
+      .trek-modal__gallery{grid-template-columns:repeat(2,1fr)}
+      .trek-modal__specs{grid-template-columns:repeat(2,1fr)}
+      .trek-highlights{grid-template-columns:1fr}
+      .trek-modal__hero{height:260px}
+      .trek-modal__hero-info{padding:20px 20px}
+      .trek-modal__gallery,.trek-modal__body{padding-left:20px;padding-right:20px}
+      .trek-modal__gallery-label{padding-left:20px;padding-right:20px}
+    }
+  </style>
 </head>
 <body>
 
@@ -43,7 +147,7 @@
         <span class="logo-icon" aria-hidden="true">⛰️</span>
         <span>Nepal Trek Connect<span class="logo-sub">Lakeside · Pokhara</span></span>
       </a>
-      <ul class="nav-links">
+      <ul class="nav-links" role="list">
         <li><a href="index.html">Home</a></li>
         <li><a href="treks.html" class="active" aria-current="page">Treks</a></li>
         <li><a href="adventures.html">Adventures</a></li>
@@ -57,7 +161,7 @@
   </div>
 </header>
 
-<nav class="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+<nav class="mobile-menu" role="navigation">
   <button class="close-menu" aria-label="Close">✕</button>
   <a href="index.html">Home</a>
   <a href="treks.html">Treks</a>
@@ -69,371 +173,283 @@
 <main id="main-content">
 
 <!-- PAGE HERO -->
-<section class="page-hero" aria-labelledby="page-hero-heading">
+<section class="page-hero" aria-labelledby="treks-hero-heading">
   <div class="container page-hero__inner">
     <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">Trekking Routes</span>
+      <a href="index.html">Home</a><span>/</span><span aria-current="page">Trekking Routes</span>
     </nav>
     <span class="eyebrow">⛰️ Complete Trek Directory</span>
-    <h1 id="page-hero-heading">Nepal Trekking Packages</h1>
-    <p>Explore our full portfolio of the best trekking routes in Nepal — from beginner-friendly Poon Hill to the legendary Everest Base Camp and remote Manaslu Circuit. All inclusive packages with expert licensed guides.</p>
+    <h1 id="treks-hero-heading">Nepal Trekking Packages</h1>
+    <p>From beginner-friendly Poon Hill to the legendary Everest Base Camp — click any trek to explore a full photo gallery, day-by-day itinerary, and book instantly. All-inclusive packages with expert licensed guides.</p>
   </div>
 </section>
 
 <!-- FILTER BAR -->
-<section class="section section--offwhite" aria-label="Trek finder and filters">
+<section class="section section--offwhite" style="padding-top:40px;padding-bottom:80px">
   <div class="container">
-    <div class="filter-bar" role="search" aria-label="Filter trekking routes">
-      <div class="filter-group">
-        <label for="filter-difficulty">Difficulty</label>
-        <select id="filter-difficulty" class="filter-select" aria-label="Filter by difficulty level">
+    <div class="filter-bar" role="search" aria-label="Filter trekking routes" style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;margin-bottom:40px;padding:24px;background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-card)">
+      <div class="filter-group" style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:140px">
+        <label for="filter-difficulty" style="font-size:.75rem;font-weight:700;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--clr-muted)">Difficulty</label>
+        <select id="filter-difficulty" class="filter-select" style="padding:10px 14px;border:1.5px solid rgba(0,0,0,0.1);border-radius:var(--radius-sm);font-size:.88rem;background:var(--clr-offwhite)">
           <option value="all">All Levels</option>
           <option value="easy">Easy</option>
           <option value="moderate">Moderate</option>
           <option value="hard">Challenging</option>
         </select>
       </div>
-      <div class="filter-group">
-        <label for="filter-duration">Duration</label>
-        <select id="filter-duration" class="filter-select" aria-label="Filter by trek duration">
+      <div class="filter-group" style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:140px">
+        <label for="filter-duration" style="font-size:.75rem;font-weight:700;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--clr-muted)">Duration</label>
+        <select id="filter-duration" class="filter-select" style="padding:10px 14px;border:1.5px solid rgba(0,0,0,0.1);border-radius:var(--radius-sm);font-size:.88rem;background:var(--clr-offwhite)">
           <option value="all">Any Duration</option>
           <option value="1-7">1–7 Days</option>
           <option value="8-14">8–14 Days</option>
           <option value="15+">15+ Days</option>
         </select>
       </div>
-      <div class="filter-group">
-        <label for="filter-price">Budget</label>
-        <select id="filter-price" class="filter-select" aria-label="Filter by price range">
+      <div class="filter-group" style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:140px">
+        <label for="filter-price" style="font-size:.75rem;font-weight:700;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--clr-muted)">Budget</label>
+        <select id="filter-price" class="filter-select" style="padding:10px 14px;border:1.5px solid rgba(0,0,0,0.1);border-radius:var(--radius-sm);font-size:.88rem;background:var(--clr-offwhite)">
           <option value="all">Any Budget</option>
-          <option value="budget">Budget (under $500)</option>
+          <option value="budget">Budget (&lt;$500)</option>
           <option value="mid">Mid-range ($500–$1500)</option>
           <option value="premium">Premium ($1500+)</option>
         </select>
       </div>
-      <button id="apply-filters" class="filter-btn active">Apply Filters</button>
-      <button id="reset-filters" class="filter-btn">Reset</button>
+      <button id="apply-filters" class="btn btn--primary" style="align-self:flex-end">Apply Filters</button>
+      <button id="reset-filters" class="btn btn--dark" style="align-self:flex-end">Reset</button>
     </div>
 
-    <!-- TREK CARDS GRID -->
+    <!-- TREK CARDS -->
     <div class="cards-grid" id="treks-grid" role="list" aria-label="Nepal trekking packages">
 
       <!-- EBC -->
-      <article id="ebc" class="trek-card fade-up" role="listitem"
+      <article class="trek-card fade-up" role="listitem" tabindex="0"
                data-difficulty="hard" data-duration="14" data-price="1200"
-               itemscope itemtype="https://schema.org/TouristTrip">
+               data-trek="ebc" aria-label="Everest Base Camp Trek – click to view details">
         <div class="trek-card__img">
-          <img src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=600&q=75"
-               alt="Everest Base Camp trek with stunning Khumbu glacier and Himalayan peaks Sagarmatha Nepal"
-               loading="lazy" width="600" height="400" itemprop="image">
+          <img src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=700&q=80"
+               alt="Everest Base Camp trek Khumbu glacier Sagarmatha Nepal" loading="lazy" width="700" height="220">
           <div class="trek-card__badge"><span class="tag tag--gold">★ Most Popular</span></div>
-          <div class="trek-card__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="USD">From $</span><span itemprop="price" content="1200">1,200</span>
-          </div>
+          <div class="trek-card__price">From $1,200</div>
         </div>
         <div class="trek-card__body">
-          <h2 class="trek-card__title" itemprop="name">Everest Base Camp Trek</h2>
-          <p class="trek-card__desc" itemprop="description">Nepal's most iconic high-altitude trek leads you to the foot of the world's highest mountain at 5,364m. Navigate the legendary Khumbu Valley through Namche Bazaar, Tengboche Monastery, and the vast Khumbu Glacier. A bucket-list adventure through living Sherpa culture.</p>
+          <h2 class="trek-card__title">Everest Base Camp Trek</h2>
+          <p class="trek-card__desc">Nepal's most iconic high-altitude trek leads to the foot of the world's highest mountain at 5,364m. Through Namche Bazaar, Tengboche Monastery, and the vast Khumbu Glacier.</p>
           <ul class="trek-card__meta" role="list">
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14 Days</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Challenging</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>5,364m</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>All groups</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Challenging</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>5,364m</li>
           </ul>
-          <div style="margin-bottom:16px">
-            <p style="font-size:0.82rem;font-weight:600;color:var(--clr-muted);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">Highlights</p>
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
-              <span class="tag" style="font-size:0.7rem">Namche Bazaar</span>
-              <span class="tag" style="font-size:0.7rem">Tengboche Monastery</span>
-              <span class="tag" style="font-size:0.7rem">Khumbu Glacier</span>
-              <span class="tag" style="font-size:0.7rem">Kalapatthar</span>
-            </div>
-          </div>
           <div class="trek-card__footer">
-            <a href="contact.html?trek=ebc" class="btn btn--dark btn--sm">Get Custom Quote</a>
-            <a href="contact.html?trek=ebc" class="btn btn--primary btn--sm">Book Now</a>
+            <a href="everest-trek.html" class="btn btn--dark btn--sm" onclick="event.stopPropagation()">View Details</a>
+            <a href="contact.html?trek=ebc" class="btn btn--primary btn--sm" onclick="event.stopPropagation()">Book Now</a>
           </div>
         </div>
       </article>
 
       <!-- Annapurna Circuit -->
-      <article id="ac" class="trek-card fade-up" role="listitem"
+      <article class="trek-card fade-up" role="listitem" tabindex="0"
                data-difficulty="hard" data-duration="14" data-price="950"
-               itemscope itemtype="https://schema.org/TouristTrip">
+               data-trek="ac" aria-label="Annapurna Circuit Trek – click to view details">
         <div class="trek-card__img">
-          <img src="https://images.unsplash.com/photo-1569693281744-61b4e89b8b1c?w=600&q=75"
-               alt="Annapurna Circuit trek through Manang valley with Annapurna III peak background Nepal"
-               loading="lazy" width="600" height="400" itemprop="image">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80"
+               alt="Annapurna Circuit trek Thorong La Pass Nepal mountain pass" loading="lazy" width="700" height="220">
           <div class="trek-card__badge"><span class="tag">Classic Circuit</span></div>
           <div class="trek-card__price">From $950</div>
         </div>
         <div class="trek-card__body">
-          <h2 class="trek-card__title" itemprop="name">Annapurna Circuit Trek</h2>
-          <p class="trek-card__desc" itemprop="description">One of the planet's great trek circumnavigations. Cross the mighty Thorong La Pass (5,416m) through 14 days of awe-inspiring diverse landscapes — from subtropical lowlands through dense rhododendron forests to stark Tibetan-plateau desert terrain.</p>
+          <h2 class="trek-card__title">Annapurna Circuit Trek</h2>
+          <p class="trek-card__desc">One of the planet's great circumnavigations. Cross the mighty Thorong La Pass (5,416m) through 14 days of diverse landscapes — subtropical lowlands to stark Tibetan plateau desert.</p>
           <ul class="trek-card__meta" role="list">
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14 Days</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Challenging</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>5,416m Pass</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>All groups</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Challenging</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>5,416m Pass</li>
           </ul>
-          <div style="margin-bottom:16px">
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
-              <span class="tag" style="font-size:0.7rem">Thorong La Pass</span>
-              <span class="tag" style="font-size:0.7rem">Muktinath Temple</span>
-              <span class="tag" style="font-size:0.7rem">Pisang Peak Views</span>
-              <span class="tag" style="font-size:0.7rem">Natural Hot Springs</span>
-            </div>
-          </div>
           <div class="trek-card__footer">
-            <a href="contact.html?trek=annapurna-circuit" class="btn btn--dark btn--sm">Get Custom Quote</a>
-            <a href="contact.html?trek=annapurna-circuit" class="btn btn--primary btn--sm">Book Now</a>
+            <a href="annapurna-circuit-trek.html" class="btn btn--dark btn--sm" onclick="event.stopPropagation()">View Details</a>
+            <a href="contact.html?trek=annapurna-circuit" class="btn btn--primary btn--sm" onclick="event.stopPropagation()">Book Now</a>
           </div>
         </div>
       </article>
 
       <!-- ABC -->
-      <article id="abc" class="trek-card fade-up" role="listitem"
+      <article class="trek-card fade-up" role="listitem" tabindex="0"
                data-difficulty="moderate" data-duration="10" data-price="750"
-               itemscope itemtype="https://schema.org/TouristTrip">
+               data-trek="abc" aria-label="Annapurna Base Camp Trek – click to view details">
         <div class="trek-card__img">
-          <img src="https://images.unsplash.com/photo-1585938389612-a552a28d6914?w=600&q=75"
-               alt="Annapurna Base Camp sanctuary with Machapuchare Fish Tail mountain Nepal"
-               loading="lazy" width="600" height="400" itemprop="image">
+          <img src="https://images.unsplash.com/photo-1585938389612-a552a28d6914?w=700&q=80"
+               alt="Annapurna Base Camp sanctuary Machapuchare Fish Tail mountain Nepal" loading="lazy" width="700" height="220">
           <div class="trek-card__badge"><span class="tag">Best Views</span></div>
           <div class="trek-card__price">From $750</div>
         </div>
         <div class="trek-card__body">
-          <h2 class="trek-card__title" itemprop="name">Annapurna Base Camp Trek</h2>
-          <p class="trek-card__desc" itemprop="description">Trek deep into the sacred Annapurna Sanctuary, a natural amphitheater enclosed by thirteen mountains above 6,000m, reaching the base camp at 4,130m. Dramatic landscapes, Modi Khola valley rhododendron forests, and the iconic Machapuchare (Fish Tail) peak.</p>
+          <h2 class="trek-card__title">Annapurna Base Camp Trek</h2>
+          <p class="trek-card__desc">Trek deep into the sacred Annapurna Sanctuary — a natural amphitheater enclosed by thirteen mountains above 6,000m, reaching 4,130m with views of the iconic Fish Tail peak.</p>
           <ul class="trek-card__meta" role="list">
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>10 Days</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>4,130m</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>10 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>4,130m</li>
           </ul>
-          <div style="margin-bottom:16px">
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
-              <span class="tag" style="font-size:0.7rem">Fish Tail Mountain</span>
-              <span class="tag" style="font-size:0.7rem">Rhododendron Forests</span>
-              <span class="tag" style="font-size:0.7rem">Modi Khola Valley</span>
-              <span class="tag" style="font-size:0.7rem">360° Panorama</span>
-            </div>
-          </div>
           <div class="trek-card__footer">
-            <a href="contact.html?trek=abc" class="btn btn--dark btn--sm">Get Custom Quote</a>
-            <a href="contact.html?trek=abc" class="btn btn--primary btn--sm">Book Now</a>
+            <a href="annapurna-trek.html" class="btn btn--dark btn--sm" onclick="event.stopPropagation()">View Details</a>
+            <a href="contact.html?trek=abc" class="btn btn--primary btn--sm" onclick="event.stopPropagation()">Book Now</a>
           </div>
         </div>
       </article>
 
       <!-- Poon Hill -->
-      <article id="poon-hill" class="trek-card fade-up" role="listitem"
-               data-difficulty="easy" data-duration="5" data-price="380"
-               itemscope itemtype="https://schema.org/TouristTrip">
+      <article class="trek-card fade-up" role="listitem" tabindex="0"
+               data-difficulty="easy" data-duration="5" data-price="350"
+               data-trek="poon" aria-label="Poon Hill Trek – click to view details">
         <div class="trek-card__img">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=75"
-               alt="Sunrise view from Poon Hill over Annapurna and Dhaulagiri mountain range Nepal trekking"
-               loading="lazy" width="600" height="400" itemprop="image">
+          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80"
+               alt="Poon Hill sunrise golden hour Annapurna mountain range Ghorepani Nepal" loading="lazy" width="700" height="220">
           <div class="trek-card__badge"><span class="tag">Best for Beginners</span></div>
-          <div class="trek-card__price">From $380</div>
+          <div class="trek-card__price">From $350</div>
         </div>
         <div class="trek-card__body">
-          <h2 class="trek-card__title" itemprop="name">Poon Hill Ghorepani Trek</h2>
-          <p class="trek-card__desc" itemprop="description">Nepal's most celebrated short trek. The legendary sunrise panorama from Poon Hill (3,210m) over 20 Himalayan peaks including Dhaulagiri and Annapurna is utterly unforgettable. Perfect introduction to Himalayan trekking through lush rhododendron forests and Gurung villages.</p>
+          <h2 class="trek-card__title">Poon Hill Trek</h2>
+          <p class="trek-card__desc">Nepal's most beloved short trek rises to the legendary Poon Hill viewpoint (3,210m) for a sunrise explosion of gold over Dhaulagiri, Annapurna, and Machhapuchhre.</p>
           <ul class="trek-card__meta" role="list">
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>5 Days</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Easy–Moderate</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>3,210m</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>5 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Easy</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>3,210m</li>
           </ul>
-          <div style="margin-bottom:16px">
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
-              <span class="tag" style="font-size:0.7rem">Sunrise Panorama</span>
-              <span class="tag" style="font-size:0.7rem">Gurung Villages</span>
-              <span class="tag" style="font-size:0.7rem">Rhododendron Forest</span>
-              <span class="tag" style="font-size:0.7rem">Family-Friendly</span>
-            </div>
-          </div>
           <div class="trek-card__footer">
-            <a href="contact.html?trek=poon-hill" class="btn btn--dark btn--sm">Get Custom Quote</a>
-            <a href="contact.html?trek=poon-hill" class="btn btn--primary btn--sm">Book Now</a>
+            <a href="poonhill-trek.html" class="btn btn--dark btn--sm" onclick="event.stopPropagation()">View Details</a>
+            <a href="contact.html?trek=poon-hill" class="btn btn--primary btn--sm" onclick="event.stopPropagation()">Book Now</a>
           </div>
         </div>
       </article>
 
       <!-- Manaslu -->
-      <article id="manaslu" class="trek-card fade-up" role="listitem"
-               data-difficulty="hard" data-duration="14" data-price="1100"
-               itemscope itemtype="https://schema.org/TouristTrip">
+      <article class="trek-card fade-up" role="listitem" tabindex="0"
+               data-difficulty="hard" data-duration="14" data-price="1600"
+               data-trek="manaslu" aria-label="Manaslu Circuit Trek – click to view details">
         <div class="trek-card__img">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75"
-               alt="Manaslu Circuit remote Himalayan trek restricted area Nepal off beaten path"
-               loading="lazy" width="600" height="400" itemprop="image">
-          <div class="trek-card__badge"><span class="tag tag--gold">Off The Beaten Path</span></div>
-          <div class="trek-card__price">From $1,100</div>
+          <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=80"
+               alt="Manaslu Circuit Trek remote Himalayan valley Larkya La Pass Nepal" loading="lazy" width="700" height="220">
+          <div class="trek-card__badge"><span class="tag tag--gold">Restricted Area</span></div>
+          <div class="trek-card__price">From $1,600</div>
         </div>
         <div class="trek-card__body">
-          <h2 class="trek-card__title" itemprop="name">Manaslu Circuit Trek</h2>
-          <p class="trek-card__desc" itemprop="description">A truly adventurous restricted-area circuit around the world's 8th highest mountain (8,163m). Untouched by mass tourism, this 14-day odyssey traverses remote Tibetan-influenced villages, ancient gompas, dense forests, and the formidable Larkya La Pass at 5,106m.</p>
+          <h2 class="trek-card__title">Manaslu Circuit Trek</h2>
+          <p class="trek-card__desc">Circle the world's 8th highest mountain through Nepal's most authentic trekking landscapes. Cross the dramatic Larkya La Pass (5,160m) into breathtaking raw Himalayan wilderness.</p>
           <ul class="trek-card__meta" role="list">
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14 Days</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Challenging</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>5,106m Pass</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Challenging</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>5,160m Pass</li>
           </ul>
-          <div style="margin-bottom:16px">
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
-              <span class="tag" style="font-size:0.7rem">Restricted Area Permit</span>
-              <span class="tag" style="font-size:0.7rem">Larkya La Pass</span>
-              <span class="tag" style="font-size:0.7rem">Tibetan Culture</span>
-              <span class="tag" style="font-size:0.7rem">Remote Wilderness</span>
-            </div>
-          </div>
           <div class="trek-card__footer">
-            <a href="contact.html?trek=manaslu" class="btn btn--dark btn--sm">Get Custom Quote</a>
-            <a href="contact.html?trek=manaslu" class="btn btn--primary btn--sm">Book Now</a>
+            <a href="manaslu-trek.html" class="btn btn--dark btn--sm" onclick="event.stopPropagation()">View Details</a>
+            <a href="contact.html?trek=manaslu" class="btn btn--primary btn--sm" onclick="event.stopPropagation()">Book Now</a>
           </div>
         </div>
       </article>
 
       <!-- Langtang -->
-      <article id="langtang" class="trek-card fade-up" role="listitem"
-               data-difficulty="moderate" data-duration="7" data-price="580"
-               itemscope itemtype="https://schema.org/TouristTrip">
+      <article class="trek-card fade-up" role="listitem" tabindex="0"
+               data-difficulty="moderate" data-duration="7" data-price="520"
+               data-trek="langtang" aria-label="Langtang Valley Trek – click to view details">
         <div class="trek-card__img">
-          <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=75"
-               alt="Langtang Valley glacier landscape with yak herding traditional Tamang village Nepal"
-               loading="lazy" width="600" height="400" itemprop="image">
+          <img src="https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=700&q=80"
+               alt="Langtang Valley trek glaciers Langtang Lirung peak Nepal Himalaya" loading="lazy" width="700" height="220">
           <div class="trek-card__badge"><span class="tag">Near Kathmandu</span></div>
-          <div class="trek-card__price">From $580</div>
+          <div class="trek-card__price">From $520</div>
         </div>
         <div class="trek-card__body">
-          <h2 class="trek-card__title" itemprop="name">Langtang Valley Trek</h2>
-          <p class="trek-card__desc" itemprop="description">Dubbed the "Valley of Glaciers," this 7-day trek offers spectacular high-altitude scenery with fascinating Tamang Buddhist culture. Famous for its cheese factories, stunning glacial moraines, and superb panoramic views — and it starts just 3 hours from Kathmandu.</p>
+          <h2 class="trek-card__title">Langtang Valley Trek</h2>
+          <p class="trek-card__desc">Called the 'Valley of Glaciers', Langtang offers stunning Himalayan scenery just north of Kathmandu. Explore Tamang villages, yak pastures, and the sacred Gosainkund lakes.</p>
           <ul class="trek-card__meta" role="list">
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 Days</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>3,983m</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>3,870m</li>
           </ul>
-          <div style="margin-bottom:16px">
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
-              <span class="tag" style="font-size:0.7rem">Valley of Glaciers</span>
-              <span class="tag" style="font-size:0.7rem">Tamang Culture</span>
-              <span class="tag" style="font-size:0.7rem">Cheese Factory</span>
-              <span class="tag" style="font-size:0.7rem">Red Pandas</span>
-            </div>
-          </div>
           <div class="trek-card__footer">
-            <a href="contact.html?trek=langtang" class="btn btn--dark btn--sm">Get Custom Quote</a>
-            <a href="contact.html?trek=langtang" class="btn btn--primary btn--sm">Book Now</a>
+            <a href="langtang-trek.html" class="btn btn--dark btn--sm" onclick="event.stopPropagation()">View Details</a>
+            <a href="contact.html?trek=langtang" class="btn btn--primary btn--sm" onclick="event.stopPropagation()">Book Now</a>
           </div>
         </div>
       </article>
 
       <!-- Upper Mustang -->
-      <article id="upper-mustang" class="trek-card fade-up" role="listitem"
-               data-difficulty="hard" data-duration="14" data-price="1800"
-               itemscope itemtype="https://schema.org/TouristTrip">
+      <article class="trek-card fade-up" role="listitem" tabindex="0"
+               data-difficulty="moderate" data-duration="14" data-price="2200"
+               data-trek="mustang" aria-label="Upper Mustang Trek – click to view details">
         <div class="trek-card__img">
-          <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?w=600&q=75"
-               alt="Upper Mustang Lo Manthang forbidden kingdom ancient walled city Nepal restricted area"
-               loading="lazy" width="600" height="400" itemprop="image">
-          <div class="trek-card__badge"><span class="tag tag--gold">Forbidden Kingdom</span></div>
-          <div class="trek-card__price">From $1,800</div>
+          <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=700&q=80"
+               alt="Upper Mustang Lo Manthang ancient walled city desert canyon Nepal" loading="lazy" width="700" height="220">
+          <div class="trek-card__badge"><span class="tag tag--gold">Special Permit</span></div>
+          <div class="trek-card__price">From $2,200</div>
         </div>
         <div class="trek-card__body">
-          <h2 class="trek-card__title" itemprop="name">Upper Mustang Trek</h2>
-          <p class="trek-card__desc" itemprop="description">Step into a living museum in the ancient Forbidden Kingdom of Lo. This restricted-area trek through otherworldly desert canyons, ancient cave monasteries, and the medieval walled city of Lo Manthang is unlike anything else on earth.</p>
+          <h2 class="trek-card__title">Upper Mustang Trek</h2>
+          <p class="trek-card__desc">Journey into the ancient Kingdom of Lo — a Tibetan-flavoured forbidden kingdom of dramatic desert canyons, cave monasteries, and the walled medieval city of Lo Manthang.</p>
           <ul class="trek-card__meta" role="list">
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14 Days</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate–Hard</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>3,840m Lo Manthang</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate–Hard</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>3,840m</li>
           </ul>
-          <div style="margin-bottom:16px">
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
-              <span class="tag" style="font-size:0.7rem">Special Permit</span>
-              <span class="tag" style="font-size:0.7rem">Lo Manthang City</span>
-              <span class="tag" style="font-size:0.7rem">Desert Canyons</span>
-              <span class="tag" style="font-size:0.7rem">Cave Monasteries</span>
-            </div>
-          </div>
           <div class="trek-card__footer">
-            <a href="contact.html?trek=upper-mustang" class="btn btn--dark btn--sm">Get Custom Quote</a>
-            <a href="contact.html?trek=upper-mustang" class="btn btn--primary btn--sm">Book Now</a>
+            <a href="uppermustang-trek.html" class="btn btn--dark btn--sm" onclick="event.stopPropagation()">View Details</a>
+            <a href="contact.html?trek=upper-mustang" class="btn btn--primary btn--sm" onclick="event.stopPropagation()">Book Now</a>
           </div>
         </div>
       </article>
 
       <!-- Mardi Himal -->
-      <article id="mardi-himal" class="trek-card fade-up" role="listitem"
+      <article class="trek-card fade-up" role="listitem" tabindex="0"
                data-difficulty="moderate" data-duration="7" data-price="450"
-               itemscope itemtype="https://schema.org/TouristTrip">
+               data-trek="mardi" aria-label="Mardi Himal Trek – click to view details">
         <div class="trek-card__img">
-          <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=75"
-               alt="Mardi Himal trek high camp with Annapurna and Machapuchare close up view Nepal"
-               loading="lazy" width="600" height="400" itemprop="image">
+          <img src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=700&q=80"
+               alt="Mardi Himal trek high camp Annapurna Machapuchare close view Nepal" loading="lazy" width="700" height="220">
           <div class="trek-card__badge"><span class="tag">Hidden Gem</span></div>
           <div class="trek-card__price">From $450</div>
         </div>
         <div class="trek-card__body">
-          <h2 class="trek-card__title" itemprop="name">Mardi Himal Trek</h2>
-          <p class="trek-card__desc" itemprop="description">Nepal's best-kept trekking secret offers jaw-dropping close-up views of Machapuchare (Fish Tail) and Annapurna South. A less-crowded, moderately challenging 7-day ridge walk through beautiful forests and high alpine meadows.</p>
+          <h2 class="trek-card__title">Mardi Himal Trek</h2>
+          <p class="trek-card__desc">Nepal's best-kept secret offers jaw-dropping close-up views of Machapuchare and Annapurna South on a less-crowded 7-day ridge walk through forests and alpine meadows.</p>
           <ul class="trek-card__meta" role="list">
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 Days</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>4,500m High Camp</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>4,500m</li>
           </ul>
-          <div style="margin-bottom:16px">
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
-              <span class="tag" style="font-size:0.7rem">Less Crowded</span>
-              <span class="tag" style="font-size:0.7rem">Close Himalayan Views</span>
-              <span class="tag" style="font-size:0.7rem">Ridge Walk</span>
-              <span class="tag" style="font-size:0.7rem">Alpine Meadows</span>
-            </div>
-          </div>
           <div class="trek-card__footer">
-            <a href="contact.html?trek=mardi-himal" class="btn btn--dark btn--sm">Get Custom Quote</a>
-            <a href="contact.html?trek=mardi-himal" class="btn btn--primary btn--sm">Book Now</a>
+            <a href="mardi-himal-trek.html" class="btn btn--dark btn--sm" onclick="event.stopPropagation()">View Details</a>
+            <a href="contact.html?trek=mardi-himal" class="btn btn--primary btn--sm" onclick="event.stopPropagation()">Book Now</a>
           </div>
         </div>
       </article>
 
       <!-- Khopra Ridge -->
-      <article id="khopra" class="trek-card fade-up" role="listitem"
+      <article class="trek-card fade-up" role="listitem" tabindex="0"
                data-difficulty="moderate" data-duration="7" data-price="420"
-               itemscope itemtype="https://schema.org/TouristTrip">
+               data-trek="khopra" aria-label="Khopra Ridge Trek – click to view details">
         <div class="trek-card__img">
-          <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=600&q=75"
-               alt="Khopra Ridge Khayer Lake trek panoramic Himalayan views Annapurna Nepal"
-               loading="lazy" width="600" height="400" itemprop="image">
+          <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=700&q=80"
+               alt="Khopra Ridge Khayer Lake sacred glacial lake Annapurna panorama Nepal" loading="lazy" width="700" height="220">
           <div class="trek-card__badge"><span class="tag">Undiscovered</span></div>
           <div class="trek-card__price">From $420</div>
         </div>
         <div class="trek-card__body">
-          <h2 class="trek-card__title" itemprop="name">Khopra Ridge & Khayer Lake Trek</h2>
-          <p class="trek-card__desc" itemprop="description">One of Nepal's most underrated treks ventures to the sacred glacial Khayer Lake (4,880m) and Khopra Ridge, offering magnificent panoramas of Dhaulagiri, Annapurna, and Nilgiri. Peaceful trails through pristine community forests.</p>
+          <h2 class="trek-card__title">Khopra Ridge & Khayer Lake</h2>
+          <p class="trek-card__desc">One of Nepal's most underrated treks ventures to sacred glacial Khayer Lake (4,880m) with magnificent panoramas of Dhaulagiri, Annapurna, and Nilgiri through pristine forests.</p>
           <ul class="trek-card__meta" role="list">
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 Days</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate</li>
-            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>4,880m</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>4,880m</li>
           </ul>
-          <div style="margin-bottom:16px">
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
-              <span class="tag" style="font-size:0.7rem">Sacred Lake</span>
-              <span class="tag" style="font-size:0.7rem">Off The Beaten Path</span>
-              <span class="tag" style="font-size:0.7rem">Community Forest</span>
-              <span class="tag" style="font-size:0.7rem">Panoramic Ridge</span>
-            </div>
-          </div>
           <div class="trek-card__footer">
-            <a href="contact.html?trek=khopra" class="btn btn--dark btn--sm">Get Custom Quote</a>
-            <a href="contact.html?trek=khopra" class="btn btn--primary btn--sm">Book Now</a>
+            <a href="khopra-trek.html" class="btn btn--dark btn--sm" onclick="event.stopPropagation()">View Details</a>
+            <a href="contact.html?trek=khopra" class="btn btn--primary btn--sm" onclick="event.stopPropagation()">Book Now</a>
           </div>
         </div>
       </article>
 
     </div>
     <div class="no-results" role="status" aria-live="polite">
-      No treks match your selected filters. Try adjusting your criteria or <button onclick="document.getElementById('reset-filters').click()" style="background:none;border:none;color:var(--clr-emerald);cursor:pointer;font-weight:600;text-decoration:underline">reset filters</button>.
+      No treks match your filters. Try adjusting or <button onclick="document.getElementById('reset-filters').click()" style="background:none;border:none;color:var(--clr-emerald);cursor:pointer;font-weight:600;text-decoration:underline">reset</button>.
     </div>
   </div>
 </section>
@@ -444,34 +460,28 @@
     <header class="section-header section-header--center fade-up">
       <span class="eyebrow">📦 Package Details</span>
       <h2 class="section-title" id="included-heading" style="color:var(--clr-offwhite)">What's Included in Every Trek</h2>
-      <p class="section-subtitle" style="color:rgba(245,242,235,0.65);margin:0 auto">All our trekking packages come with comprehensive inclusions so you can focus on the journey, not the logistics.</p>
     </header>
     <div class="features-grid fade-up">
-      <div class="feature-item"><div class="feature-icon" aria-hidden="true">🧭</div><div class="feature-title">Licensed Guide</div><p class="feature-desc">Experienced, English-speaking, government-licensed Nepali trekking guide throughout your entire journey.</p></div>
-      <div class="feature-item"><div class="feature-icon" aria-hidden="true">🎒</div><div class="feature-title">Porter Service</div><p class="feature-desc">Professional porter to carry your main pack (up to 10kg), leaving you free to fully enjoy the trails.</p></div>
-      <div class="feature-item"><div class="feature-icon" aria-hidden="true">🏨</div><div class="feature-title">Teahouse Lodging</div><p class="feature-desc">All night accommodations in comfortable teahouses along the trail with meals where possible.</p></div>
-      <div class="feature-item"><div class="feature-icon" aria-hidden="true">📋</div><div class="feature-title">All Permits</div><p class="feature-desc">TIMS card, National Park entry fees, Conservation Area fees and all required restricted-area permits.</p></div>
-      <div class="feature-item"><div class="feature-icon" aria-hidden="true">🚌</div><div class="feature-title">Transportation</div><p class="feature-desc">Airport/hotel transfers and all transportation to and from trek start/end points included.</p></div>
-      <div class="feature-item"><div class="feature-icon" aria-hidden="true">🏥</div><div class="feature-title">First Aid Kit</div><p class="feature-desc">Comprehensive first aid kit, altitude sickness medication, pulse oximeter, and emergency procedures.</p></div>
+      <div class="feature-item"><div class="feature-icon">🧭</div><div class="feature-title">Licensed Guide</div><p class="feature-desc">Experienced, English-speaking, government-licensed Nepali trekking guide throughout your entire journey.</p></div>
+      <div class="feature-item"><div class="feature-icon">🎒</div><div class="feature-title">Porter Service</div><p class="feature-desc">Professional porter to carry your main pack (up to 10kg), leaving you free to fully enjoy the trails.</p></div>
+      <div class="feature-item"><div class="feature-icon">🏨</div><div class="feature-title">Teahouse Lodging</div><p class="feature-desc">All night accommodations in comfortable teahouses along the trail.</p></div>
+      <div class="feature-item"><div class="feature-icon">📋</div><div class="feature-title">All Permits</div><p class="feature-desc">TIMS card, National Park entry, Conservation Area fees, and all required restricted-area permits.</p></div>
+      <div class="feature-item"><div class="feature-icon">🚌</div><div class="feature-title">Transportation</div><p class="feature-desc">Airport/hotel transfers and all transport to and from trek start/end points included.</p></div>
+      <div class="feature-item"><div class="feature-icon">🏥</div><div class="feature-title">First Aid Kit</div><p class="feature-desc">Comprehensive first aid kit, altitude sickness medication, pulse oximeter, and emergency procedures.</p></div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="section section--offwhite" aria-label="Booking call to action">
-  <div class="container" style="text-align:center">
-    <div class="fade-up" style="max-width:600px;margin:0 auto">
+<section class="section section--offwhite" style="text-align:center">
+  <div class="container" style="max-width:600px">
+    <div class="fade-up">
       <span class="eyebrow">📞 Ready to Trek?</span>
       <h2 class="section-title">Can't Decide? Let Us Help!</h2>
-      <p class="section-subtitle" style="margin:0 auto 32px">Our trekking experts will match you with the perfect route based on your fitness level, time, and budget. Free consultation, no obligations.</p>
+      <p class="section-subtitle" style="margin:0 auto 32px">Our trekking experts will match you with the perfect route based on your fitness, time, and budget.</p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-        <a href="https://wa.me/9779846958184?text=Hello!%20I%20need%20help%20choosing%20the%20right%20Nepal%20trek%20for%20me."
-           target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
-          💬 WhatsApp Us Now
-        </a>
-        <a href="contact.html" class="btn btn--dark btn--lg">
-          📋 Get Custom Quote
-        </a>
+        <a href="https://wa.me/9779846958184?text=Hello!%20I%20need%20help%20choosing%20the%20right%20Nepal%20trek%20for%20me." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">💬 WhatsApp Us Now</a>
+        <a href="contact.html" class="btn btn--dark btn--lg">📋 Get Custom Quote</a>
       </div>
     </div>
   </div>
@@ -479,12 +489,66 @@
 
 </main>
 
+<!-- ======================================================
+     TREK MODAL
+     ====================================================== -->
+<div class="trek-modal-overlay" id="trek-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-trek-title">
+  <div class="trek-modal" id="trek-modal">
+    <button class="trek-modal__close" aria-label="Close trek details" id="modal-close">✕</button>
+
+    <div class="trek-modal__hero">
+      <img id="modal-hero-img" src="" alt="" loading="eager">
+      <div class="trek-modal__hero-overlay"></div>
+      <div class="trek-modal__hero-info">
+        <h2 id="modal-trek-title"></h2>
+        <div class="trek-modal__hero-meta" id="modal-meta"></div>
+      </div>
+    </div>
+
+    <p class="trek-modal__gallery-label">📸 Photo Gallery</p>
+    <div class="trek-modal__gallery" id="modal-gallery"></div>
+
+    <div class="trek-modal__body">
+      <p class="trek-modal__desc" id="modal-desc"></p>
+
+      <p class="trek-modal__section-title">Quick Facts</p>
+      <div class="trek-modal__specs" id="modal-specs"></div>
+
+      <p class="trek-modal__section-title">Trek Highlights</p>
+      <div class="trek-highlights" id="modal-highlights"></div>
+
+      <p class="trek-modal__section-title">Sample Itinerary</p>
+      <div class="itinerary-list" id="modal-itinerary"></div>
+
+      <div class="trek-modal__actions" id="modal-actions"></div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox">
+  <button class="lightbox-close" id="lb-close" aria-label="Close photo">✕</button>
+  <button class="lightbox-prev" id="lb-prev" aria-label="Previous photo">‹</button>
+  <img id="lb-img" src="" alt="">
+  <button class="lightbox-next" id="lb-next" aria-label="Next photo">›</button>
+</div>
+
+<!-- STICKY WHATSAPP (always visible) -->
+<a href="https://wa.me/9779846958184?text=Hello%20Nepal%20Trek%20Connect!%20I%20would%20like%20to%20enquire%20about%20your%20trek%20packages."
+   target="_blank" rel="noopener noreferrer"
+   class="wa-sticky-btn"
+   aria-label="Chat on WhatsApp"
+   title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.478 2 2 6.478 2 11.999c0 1.906.506 3.692 1.385 5.234L2 22l4.893-1.363A9.935 9.935 0 0012 22c5.521 0 10-4.479 10-10.001C22 6.478 17.521 2 11.999 2zm.001 18.001a8 8 0 01-4.08-1.116l-.292-.173-3.026.843.844-3.025-.193-.305A7.987 7.987 0 014 12C4 7.582 7.582 4 12 4c4.42 0 8 3.581 8 7.999 0 4.42-3.58 8.002-8 8.002z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="nav-logo">
-          <span class="logo-icon" aria-hidden="true">⛰️</span>
+          <span class="logo-icon">⛰️</span>
           <span>Nepal Trek Connect<span class="logo-sub">Lakeside · Pokhara · Nepal</span></span>
         </a>
         <p>Your trusted partner for Himalayan trekking adventures, paragliding, kayaking, ziplining and Chitwan wildlife safaris.</p>
@@ -498,14 +562,12 @@
       <div class="footer-col">
         <h4>Trek Routes</h4>
         <ul class="footer-links">
-          <li><a href="#ebc">Everest Base Camp</a></li>
-          <li><a href="#ac">Annapurna Circuit</a></li>
-          <li><a href="#abc">Annapurna Base Camp</a></li>
-          <li><a href="#poon-hill">Poon Hill Trek</a></li>
-          <li><a href="#manaslu">Manaslu Circuit</a></li>
-          <li><a href="#langtang">Langtang Valley</a></li>
-          <li><a href="#upper-mustang">Upper Mustang</a></li>
-          <li><a href="#mardi-himal">Mardi Himal</a></li>
+          <li><a href="#" data-trek="ebc">Everest Base Camp</a></li>
+          <li><a href="#" data-trek="ac">Annapurna Circuit</a></li>
+          <li><a href="#" data-trek="abc">Annapurna Base Camp</a></li>
+          <li><a href="#" data-trek="poon">Poon Hill Trek</a></li>
+          <li><a href="#" data-trek="manaslu">Manaslu Circuit</a></li>
+          <li><a href="#" data-trek="langtang">Langtang Valley</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -521,9 +583,9 @@
         <h4>Contact</h4>
         <ul class="footer-links">
           <li><a href="tel:+9779846958184">📞 +977 984 695 8184</a></li>
-          <li><a href="tel:+9779846076397">📞 +977 984 607 6397</a></li>
           <li><a href="mailto:nepaltrekconnect@gmail.com">✉️ nepaltrekconnect@gmail.com</a></li>
           <li><a href="https://wa.me/9779846958184" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a></li>
+          <li><a href="contact.html">📋 Book Now</a></li>
         </ul>
       </div>
     </div>
@@ -534,33 +596,414 @@
   </div>
 </footer>
 
-<!-- Sticky Widget -->
-<div class="sticky-widget" role="complementary" aria-label="Quick contact">
-  <div class="sticky-actions hidden">
-    <a href="https://wa.me/9779846958184" target="_blank" rel="noopener noreferrer" class="sticky-fab sticky-fab--whatsapp" aria-label="WhatsApp">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.478 2 2 6.478 2 11.999c0 1.906.506 3.692 1.385 5.234L2 22l4.893-1.363A9.935 9.935 0 0012 22c5.521 0 10-4.479 10-10.001C22 6.478 17.521 2 11.999 2zm.001 18.001a8 8 0 01-4.08-1.116l-.292-.173-3.026.843.844-3.025-.193-.305A7.987 7.987 0 014 12C4 7.582 7.582 4 12 4c4.42 0 8 3.581 8 7.999 0 4.42-3.58 8.002-8 8.002z"/></svg>
-      <span class="sticky-tooltip">WhatsApp Us</span>
-    </a>
-    <button class="sticky-fab sticky-fab--email" aria-label="Email inquiry">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      <span class="sticky-tooltip">Quick Email</span>
-    </button>
-  </div>
-  <button class="sticky-fab sticky-fab--main" aria-label="Contact us" aria-expanded="false">✦</button>
-</div>
-<div class="quick-form-popup hidden" role="dialog" aria-modal="true" aria-labelledby="qf-title-treks">
-  <button class="close-popup" aria-label="Close">✕</button>
-  <h4 id="qf-title-treks">Quick Inquiry</h4>
-  <p>We respond within 2 hours!</p>
-  <form id="quick-contact-form" novalidate>
-    <input type="text" name="qname" placeholder="Your name" required aria-label="Name">
-    <input type="email" name="qemail" placeholder="your@email.com" required aria-label="Email">
-    <textarea name="qmessage" placeholder="Which trek interests you?" rows="3" aria-label="Message"></textarea>
-    <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">Send Message</button>
-    <div class="form-success" role="alert" aria-live="polite"></div>
-  </form>
-</div>
-
 <script src="app.js" defer></script>
+<script>
+/* ---- TREK DATA ---- */
+const TREKS = {
+  ebc: {
+    name: 'Everest Base Camp Trek',
+    heroImg: 'https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=1200&q=85',
+    price: '$1,200',
+    duration: '14 Days',
+    difficulty: 'Challenging',
+    altitude: '5,364m',
+    season: 'Oct–Nov, Mar–May',
+    groupSize: 'All groups',
+    desc: `Nepal's most iconic high-altitude adventure leads you through the legendary Khumbu Valley to the foot of the world's highest mountain. Beginning with a dramatic flight to Lukla, you trek through rhododendron forests and past glacial lakes to the thriving mountain town of Namche Bazaar. Ascending through Tengboche Monastery — with its breathtaking Ama Dablam backdrop — you pass Dingboche and Lobuche before reaching Everest Base Camp at 5,364m. The pre-dawn hike to Kalapatthar (5,545m) at sunrise delivers the most spectacular panorama on Earth: Everest, Lhotse, Nuptse, Pumori, and Ama Dablam all blazing in golden light.`,
+    photos: [
+      ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80','Everest panorama from Kalapatthar at sunrise'],
+      ['https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=700&q=80','Namche Bazaar the gateway to Everest region'],
+      ['https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80','High altitude trail through Khumbu Valley'],
+      ['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80','Tengboche Monastery with Ama Dablam behind'],
+      ['https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80','Khumbu Glacier and Base Camp moraine'],
+      ['https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=80','Sherpa porter on steep Himalayan trail'],
+    ],
+    highlights: ['Stand at Everest Base Camp 5,364m','Sunrise panorama from Kalapatthar 5,545m','Visit Tengboche Monastery','Explore Namche Bazaar','Khumbu Icefall views','Sherpa culture & villages','Ama Dablam & Lhotse views','Traditional teahouse experience'],
+    itinerary: [
+      ['1','Fly Kathmandu → Lukla, trek to Phakding','Altitude gain begins'],
+      ['2','Trek Phakding → Namche Bazaar (3,440m)','Steep climb through rhododendron forests'],
+      ['3','Acclimatisation day in Namche','Optional hike to Everest View Hotel'],
+      ['4','Namche → Tengboche (3,867m)','Monastery visit, Ama Dablam views'],
+      ['5','Tengboche → Dingboche (4,410m)','Enter high alpine zone'],
+      ['6','Acclimatisation day – hike to Nagarjun Hill','360° panorama of peaks'],
+      ['7','Dingboche → Lobuche (4,940m)','Memorial park for fallen climbers'],
+      ['8','Lobuche → Gorak Shep → Everest Base Camp (5,364m)','The moment you've been dreaming of'],
+      ['9','Kalapatthar sunrise (5,545m) → Pheriche','Highest point, best Everest views'],
+      ['10–14','Gradual descent via Namche back to Lukla, fly to Kathmandu',''],
+    ],
+    bookVal: 'Everest Base Camp Trek',
+    waMsg: 'I want to book the Everest Base Camp Trek!',
+  },
+  ac: {
+    name: 'Annapurna Circuit Trek',
+    heroImg: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=85',
+    price: '$950',
+    duration: '14 Days',
+    difficulty: 'Challenging',
+    altitude: '5,416m (Thorong La)',
+    season: 'Oct–Nov, Mar–May',
+    groupSize: 'All groups',
+    desc: `Widely celebrated as one of the greatest treks on Earth, the Annapurna Circuit encircles the entire Annapurna massif through one of the most diverse landscapes on the planet. You begin in subtropical rice paddies, pass through oak and rhododendron forests, traverse alpine meadows, and finally ascend to the barren, wind-scoured plateau that feels more like Tibet than Nepal. The crown jewel is the Thorong La Pass at 5,416m — the world's highest frequently trekked mountain pass — conquered on an early morning push before descending to the sacred Muktinath Temple. Natural hot springs at Tatopani and the charming medieval town of Manang are among the many magical stops.`,
+    photos: [
+      ['https://images.unsplash.com/photo-1569693281744-61b4e89b8b1c?w=700&q=80','Manang Valley with Annapurna III towering behind'],
+      ['https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?w=700&q=80','Crossing Thorong La Pass 5416m at dawn'],
+      ['https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=700&q=80','Mustang canyon landscape on descent'],
+      ['https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80','High Himalayan trail above the clouds'],
+      ['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80','Muktinath Temple sacred pilgrim site'],
+      ['https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=700&q=80','Lower Pisang village with Annapurna II'],
+    ],
+    highlights: ['Cross Thorong La Pass (5,416m)','Visit sacred Muktinath Temple','Natural hot springs at Tatopani','Dramatic landscape diversity','Manang village acclimatisation','Marpha apple village & orchards','Pisang & Braga old villages','Tilicho Lake optional extension'],
+    itinerary: [
+      ['1–2','Drive/fly to Besisahar, trek to Bahundanda','Subtropical start'],
+      ['3–5','Jagat → Dharapani → Chame','Valley deepens, peaks emerge'],
+      ['6–7','Pisang → Manang (3,519m)','Acclimatisation & rest day'],
+      ['8','Acclimatisation hike above Manang','Views of Gangapurna Glacier'],
+      ['9','Manang → Yak Kharka → Thorong Phedi (4,450m)','Final push preparation'],
+      ['10','Summit Thorong La (5,416m) → Muktinath','The legendary crossing'],
+      ['11–12','Muktinath → Marpha → Tatopani','Hot springs and apple orchards'],
+      ['13–14','Tatopani → Nayapul → Pokhara','Triumphant completion'],
+    ],
+    bookVal: 'Annapurna Circuit Trek',
+    waMsg: 'I want to book the Annapurna Circuit Trek!',
+  },
+  abc: {
+    name: 'Annapurna Base Camp Trek',
+    heroImg: 'https://images.unsplash.com/photo-1585938389612-a552a28d6914?w=1200&q=85',
+    price: '$750',
+    duration: '10 Days',
+    difficulty: 'Moderate',
+    altitude: '4,130m',
+    season: 'Oct–Nov, Mar–May',
+    groupSize: 'All groups',
+    desc: `The Annapurna Base Camp trek leads deep into the legendary Annapurna Sanctuary — a glacially carved natural amphitheater ringed by thirteen peaks over 6,000m. The trail climbs through rhododendron forests that blaze with colour in spring, passing the gurgling Modi Khola river through narrow gorges before suddenly opening into the vast white cathedral of the Sanctuary. At Base Camp, you are completely surrounded by giants: Annapurna I (8,091m), Machapuchare (6,993m), Hiunchuli (6,441m), and Annapurna III (7,555m) all converge around you in a 360° panorama that is among the most dramatic on any trek in the world.`,
+    photos: [
+      ['https://images.unsplash.com/photo-1585938389612-a552a28d6914?w=700&q=80','Annapurna Base Camp 360° mountain amphitheater'],
+      ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80','Dawn light on Annapurna I from base camp'],
+      ['https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=700&q=80','Machapuchare Fish Tail from Modi Khola valley'],
+      ['https://images.unsplash.com/photo-1569693281744-61b4e89b8b1c?w=700&q=80','Rhododendron forest trail in spring bloom'],
+      ['https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80','Trek through Chhomrong terraced village'],
+      ['https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=700&q=80','High altitude trail above treeline Nepal'],
+    ],
+    highlights: ['360° sanctuary panorama at ABC','Machapuchare Fish Tail close views','Rhododendron forest in full bloom','Himalayan marmots & wildlife','Modi Khola gorge river trail','Chhomrong & Sinuwa villages','Sunrise at Annapurna Base Camp','Clear night stargazing at altitude'],
+    itinerary: [
+      ['1','Drive Pokhara → Nayapul → trek to Tikhedhunga',''],
+      ['2','Tikhedhunga → Ghorepani (2,860m)','Long but rewarding climb'],
+      ['3','Optional: sunrise at Poon Hill → Tadapani','Famous sunrise detour'],
+      ['4','Tadapani → Chhomrong (2,170m)','Terraced village with Annapurna views'],
+      ['5','Chhomrong → Dovan (2,600m)','Enter the Modi Khola gorge'],
+      ['6','Dovan → Machhapuchhare BC (3,700m)','Fish Tail fills the sky'],
+      ['7','Machhapuchhare BC → Annapurna Base Camp (4,130m)','Goal achieved!'],
+      ['8–10','Descent via same route to Nayapul, drive to Pokhara',''],
+    ],
+    bookVal: 'Annapurna Base Camp Trek',
+    waMsg: 'I want to book the Annapurna Base Camp Trek!',
+  },
+  poon: {
+    name: 'Poon Hill Trek',
+    heroImg: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=85',
+    price: '$350',
+    duration: '5 Days',
+    difficulty: 'Easy',
+    altitude: '3,210m',
+    season: 'Year-round (best Oct–Apr)',
+    groupSize: 'All ages & groups',
+    desc: `The Poon Hill trek is Nepal's most beloved short walk, designed to deliver maximum Himalayan impact with minimal time investment. The trail rises through the traditional Gurung village of Ghorepani and its surrounding rhododendron forests — which explode in crimson and pink during March–April — before a pre-dawn summit push brings you to the legendary Poon Hill viewpoint. As sunrise sweeps across the horizon, it illuminates a 180km panorama of snowcapped peaks: Dhaulagiri (8,167m), Annapurna I–IV, Hiunchuli, Annapurna South, and the sacred Machapuchare all glow gold. No high-altitude acclimatisation required, no technical climbing — just pure Himalayan magic, accessible to all.`,
+    photos: [
+      ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80','Poon Hill sunrise panorama over Annapurna range'],
+      ['https://images.unsplash.com/photo-1574068468668-a05a11f871da?w=700&q=80','Rhododendron forest trail in spring bloom'],
+      ['https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=700&q=80','Machapuchare viewed from Poon Hill viewpoint'],
+      ['https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=700&q=80','Ghorepani village with Himalayan backdrop'],
+      ['https://images.unsplash.com/photo-1569693281744-61b4e89b8b1c?w=700&q=80','Trek trail through stone-paved Gurung village'],
+      ['https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=700&q=80','Dhaulagiri and Annapurna South at golden hour'],
+    ],
+    highlights: ['Legendary Poon Hill sunrise (3,210m)','Dhaulagiri & Annapurna panorama','Rhododendron forests in bloom','Authentic Gurung villages','No altitude acclimatisation needed','Perfect for families & beginners','Short 5-day itinerary','Year-round accessibility'],
+    itinerary: [
+      ['1','Drive Pokhara → Nayapul, trek to Tikhedhunga (1,540m)','Easy first day walk'],
+      ['2','Tikhedhunga → Ghorepani (2,860m)','3,300 stone steps – worth every one!'],
+      ['3','Pre-dawn hike Poon Hill (3,210m) → Tadapani','The unforgettable sunrise moment'],
+      ['4','Tadapani → Ghandruk village (1,940m)','Largest Gurung village in Nepal'],
+      ['5','Ghandruk → Nayapul, drive back to Pokhara','Trek complete!'],
+    ],
+    bookVal: 'Poon Hill Trek',
+    waMsg: 'I want to book the Poon Hill Trek!',
+  },
+  manaslu: {
+    name: 'Manaslu Circuit Trek',
+    heroImg: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&q=85',
+    price: '$1,600',
+    duration: '14 Days',
+    difficulty: 'Challenging',
+    altitude: '5,160m (Larkya La)',
+    season: 'Oct–Nov, Mar–Apr',
+    groupSize: 'Small groups (max 12)',
+    desc: `The Manaslu Circuit is Nepal's premier off-the-beaten-path adventure — a restricted area trek that circumnavigates the world's 8th highest mountain (8,163m) through landscapes of such raw, untouched beauty that seasoned trekkers call it "what Annapurna Circuit used to be." The dramatic Larkya La Pass at 5,160m is one of the most challenging and rewarding high passes in Nepal. Villages along the route are overwhelmingly Buddhist — prayer wheels, mani walls, gompa monasteries, and fluttering prayer flags frame every scene. Wildlife including snow leopards, Himalayan tahr, and red pandas inhabit these remote forests. A special restricted-area permit is required, making this an exclusive and unforgettable journey.`,
+    photos: [
+      ['https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=80','Manaslu summit (8163m) viewed from the circuit trail'],
+      ['https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80','Larkya La Pass 5160m crossing in early morning'],
+      ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80','Tsum Valley Buddhist monastery with peaks'],
+      ['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80','Himalayan tahr wildlife on rocky slope Manaslu'],
+      ['https://images.unsplash.com/photo-1606117331085-5760e3b58520?w=700&q=80','Prayer flags and mani walls Manaslu circuit'],
+      ['https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=700&q=80','Remote Nubri valley village Nepal restricted area'],
+    ],
+    highlights: ['Restricted area – very few trekkers','Larkya La Pass (5,160m)','Manaslu summit views (8,163m)','Authentic Buddhist culture','Snow leopard habitat','Dramatic Budhi Gandaki gorge','Tsum Valley optional extension','Primitive teahouses & yak herders'],
+    itinerary: [
+      ['1','Drive Kathmandu → Soti Khola (700m)','Long drive, journey begins'],
+      ['2–4','Soti Khola → Jagat → Deng','Budhi Gandaki gorge deepens'],
+      ['5–7','Deng → Namrung → Samagaon (3,530m)','Buddhist heartland, Manaslu views'],
+      ['8','Acclimatisation at Samagaon','Optional hike to Manaslu Base Camp'],
+      ['9','Samagaon → Samdo (3,865m)','High altitude village near Tibetan border'],
+      ['10','Rest & acclimatisation day Samdo','Last preparation for pass'],
+      ['11','Samdo → Dharamsala / Larkya Phedi (4,460m)','Base camp for pass crossing'],
+      ['12','LARKYA LA PASS (5,160m) → Bimthang','The greatest day of the trek'],
+      ['13–14','Bimthang → Dharapani → drive to Kathmandu','Victory descent'],
+    ],
+    bookVal: 'Manaslu Circuit Trek',
+    waMsg: 'I want to book the Manaslu Circuit Trek!',
+  },
+  langtang: {
+    name: 'Langtang Valley Trek',
+    heroImg: 'https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=1200&q=85',
+    price: '$520',
+    duration: '7 Days',
+    difficulty: 'Moderate',
+    altitude: '3,870m (Kyanjin Gompa)',
+    season: 'Oct–Nov, Mar–May',
+    groupSize: 'All groups',
+    desc: `The Langtang Valley Trek — known as the "Valley of Glaciers" — is one of Nepal's most accessible Himalayan adventures, beginning just a few hours north of Kathmandu. The trail climbs steeply through subtropical forests alive with langur monkeys and colourful birds before opening into the broad glacial U-shaped valley of Langtang itself, dominated by the massive white wall of Langtang Lirung (7,227m). The Tamang people who inhabit these villages maintain a culture distinct from the lowlands — their Buddhist traditions, distinctive architecture, and legendary yak cheese (produced at the famous Langtang cheese factory) make this a culturally rich journey as well as a scenic masterpiece.`,
+    photos: [
+      ['https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=700&q=80','Langtang Valley with Langtang Lirung glacier wall'],
+      ['https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80','Kyanjin Gompa ancient monastery with peaks'],
+      ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80','Tserko Ri viewpoint above Kyanjin Gompa'],
+      ['https://images.unsplash.com/photo-1569693281744-61b4e89b8b1c?w=700&q=80','Tamang village houses with prayer flags Nepal'],
+      ['https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=700&q=80','Yak herders in Langtang high pastures'],
+      ['https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=700&q=80','Glacial stream trail Langtang Valley trek'],
+    ],
+    highlights: ['Langtang Lirung glacier close views','Kyanjin Gompa 3,870m monastery','Optional Tserko Ri (4,984m) summit','Famous Langtang yak cheese','Tamang Buddhist culture','Langur monkey forest trail','Near Kathmandu (no long drive)','Gosainkund Lakes optional extension'],
+    itinerary: [
+      ['1','Drive Kathmandu → Syabrubesi (1,460m)','Scenic mountain road drive'],
+      ['2','Syabrubesi → Lama Hotel (2,380m)','Forest trail with wildlife'],
+      ['3','Lama Hotel → Langtang Village (3,430m)','Valley opens dramatically'],
+      ['4','Langtang → Kyanjin Gompa (3,870m)','Ancient monastery arrival'],
+      ['5','Day hike Tserko Ri (4,984m) or Kyanjin Ri (4,773m)','Optional high viewpoint'],
+      ['6','Kyanjin Gompa → Lama Hotel','Rapid descent through forest'],
+      ['7','Lama Hotel → Syabrubesi → drive to Kathmandu','Trek complete'],
+    ],
+    bookVal: 'Langtang Valley Trek',
+    waMsg: 'I want to book the Langtang Valley Trek!',
+  },
+  mustang: {
+    name: 'Upper Mustang Trek',
+    heroImg: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=1200&q=85',
+    price: '$2,200',
+    duration: '14 Days',
+    difficulty: 'Moderate–Challenging',
+    altitude: '3,840m (Lo Manthang)',
+    season: 'May–Oct (rain shadow, best year-round)',
+    groupSize: 'Small groups',
+    desc: `Upper Mustang is Nepal's last forbidden kingdom — a high-altitude desert enclave that remained closed to the outside world until 1992. Sheltered in the rain shadow of the Annapurna and Dhaulagiri ranges, this arid landscape of dramatic ochre and crimson canyons, crumbling cave monasteries carved into cliffsides, and medieval walled cities feels utterly unlike anywhere else on Earth. Lo Manthang, the ancient capital, still operates under the rule of its Raja and preserves Tibetan Buddhist traditions in a virtually unchanged form. The trek is unique in that it can be done even during Nepal's monsoon season, making it a prized option for June–September trekkers.`,
+    photos: [
+      ['https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=700&q=80','Lo Manthang ancient walled medieval city Upper Mustang'],
+      ['https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=700&q=80','Dramatic desert canyon landscape Mustang Nepal'],
+      ['https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=80','Cave monastery carved into red cliff Mustang'],
+      ['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80','Tibetan prayer flags and chortens Mustang trail'],
+      ['https://images.unsplash.com/photo-1569693281744-61b4e89b8b1c?w=700&q=80','Mustang trail winding through eroded badlands'],
+      ['https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=700&q=80','Traditional Mustang village with flat-roofed houses'],
+    ],
+    highlights: ['Lo Manthang walled medieval city','Cave monastery cliff dwellings','Restricted Area permit (exclusive)','Open during monsoon season','Ancient Tibetan Buddhist culture','Dramatic desert canyon scenery','Raja of Mustang royal palace','Tsarang and Charang ancient forts'],
+    itinerary: [
+      ['1','Fly Pokhara → Jomsom (2,720m), trek to Kagbeni','Entry to restricted zone'],
+      ['2–3','Kagbeni → Chele → Syangboche','Canyon landscapes deepen'],
+      ['4–5','Syangboche → Ghami → Charang','Ancient forts and monasteries'],
+      ['6','Charang → Lo Manthang (3,840m)','Ancient capital revealed'],
+      ['7–8','Exploration days in Lo Manthang','Palace, monasteries, Choser caves'],
+      ['9–11','Return via different route through Tsarang',''],
+      ['12','Kagbeni → Jomsom','Last night in Mustang'],
+      ['13–14','Fly Jomsom → Pokhara, drive to Kathmandu',''],
+    ],
+    bookVal: 'Upper Mustang Trek',
+    waMsg: 'I want to book the Upper Mustang Trek!',
+  },
+  mardi: {
+    name: 'Mardi Himal Trek',
+    heroImg: 'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=1200&q=85',
+    price: '$450',
+    duration: '7 Days',
+    difficulty: 'Moderate',
+    altitude: '4,500m (High Camp)',
+    season: 'Oct–Nov, Mar–May',
+    groupSize: 'All groups',
+    desc: `The Mardi Himal Trek is Nepal's most beautifully kept trekking secret — a new route (fully opened 2012) that follows a spectacular, uncrowded ridge directly towards Machapuchare (Fish Tail) and Annapurna South, offering some of the closest views of these famous peaks available on any trek in Nepal. The trail climbs through dense rhododendron and bamboo forests before emerging above the treeline onto a long scenic ridge with progressively closer and more dramatic mountain perspectives. At High Camp (4,500m), you are face-to-face with Machapuchare and Mardi Himal in an intimacy that more popular treks cannot match.`,
+    photos: [
+      ['https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=700&q=80','Mardi Himal High Camp close view of Machapuchare Fish Tail'],
+      ['https://images.unsplash.com/photo-1585938389612-a552a28d6914?w=700&q=80','Annapurna South face from Mardi Himal ridge'],
+      ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80','Alpine meadow ridge walk above treeline Mardi'],
+      ['https://images.unsplash.com/photo-1569693281744-61b4e89b8b1c?w=700&q=80','Rhododendron and bamboo forest Mardi Himal trail'],
+      ['https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=700&q=80','Mardi Himal Low Camp teahouse mountain views'],
+      ['https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80','Dawn sunrise on Annapurna from Mardi High Camp'],
+    ],
+    highlights: ['Intimate Fish Tail mountain views','Uncrowded authentic trail','High Camp (4,500m) panorama','Rhododendron & bamboo forests','Off the main tourist routes','Annapurna South close approach','Alpine meadow ridge walk','Combine with Poon Hill easily'],
+    itinerary: [
+      ['1','Drive Pokhara → Kande (1,700m), trek to Forest Camp','Gentle forest start'],
+      ['2','Forest Camp → Low Camp (2,990m)','Rhododendron forests thick with birds'],
+      ['3','Low Camp → High Camp (3,580m)','Ridge opens, mountains appear'],
+      ['4','High Camp → Upper Viewpoint (4,500m) → High Camp','Maximum mountain intimacy'],
+      ['5','High Camp → Sidhing village descent','Lush middle hills return'],
+      ['6','Sidhing → Lumre → drive to Pokhara','Trek complete'],
+    ],
+    bookVal: 'Mardi Himal Trek',
+    waMsg: 'I want to book the Mardi Himal Trek!',
+  },
+  khopra: {
+    name: 'Khopra Ridge & Khayer Lake Trek',
+    heroImg: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=1200&q=85',
+    price: '$420',
+    duration: '7 Days',
+    difficulty: 'Moderate',
+    altitude: '4,880m (Khayer Lake)',
+    season: 'Oct–Nov, Mar–May',
+    groupSize: 'All groups',
+    desc: `The Khopra Ridge trek is one of Nepal's most magnificent yet least-known trekking routes — a community-managed trail through pristine oak and rhododendron forests to the sacred glacial Khayer Lake (4,880m) with sweeping panoramas of Dhaulagiri, Annapurna, and Nilgiri. The ridge itself offers one of the finest high viewpoints in the Annapurna region, often with complete solitude even during peak season. The trail passes through traditional Gurung and Magar villages little touched by tourism, where community homestays provide authentic local hospitality. The sacred Khayer Lake at journey's peak is a stunning glacial tarn ringed by snowy peaks — a place of profound beauty and silence.`,
+    photos: [
+      ['https://images.unsplash.com/photo-1605649487212-47bdab064df7?w=700&q=80','Khopra Ridge panoramic Dhaulagiri Annapurna views'],
+      ['https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=700&q=80','Sacred Khayer glacial lake high altitude Nepal'],
+      ['https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80','Khopra Ridge viewpoint sunrise Himalaya'],
+      ['https://images.unsplash.com/photo-1569693281744-61b4e89b8b1c?w=700&q=80','Community forest trail Khopra Ridge pristine'],
+      ['https://images.unsplash.com/photo-1585938389612-a552a28d6914?w=700&q=80','Nilgiri peak above Khopra community lodge'],
+      ['https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=700&q=80','Traditional Magar village Khopra trek Nepal'],
+    ],
+    highlights: ['Sacred Khayer Lake (4,880m)','Dhaulagiri & Annapurna panorama','Very few other trekkers','Community-managed lodges','Pristine ancient forests','Traditional Gurung & Magar villages','Combine with Poon Hill route','Best panoramic ridge in Annapurna'],
+    itinerary: [
+      ['1','Drive Pokhara → Nayapul, trek to Tikhedhunga','Same start as Poon Hill'],
+      ['2','Tikhedhunga → Ghorepani (2,860m)','Optional Poon Hill sunrise'],
+      ['3','Ghorepani → Swanta (2,200m)','Leave the crowds behind permanently'],
+      ['4','Swanta → Khopra Danda Ridge (3,660m)','First ridge views of Dhaulagiri'],
+      ['5','Khopra → Khayer Lake (4,880m) and return','Sacred glacial lake at altitude'],
+      ['6','Khopra Ridge → Shikha (1,980m)','Long scenic descent'],
+      ['7','Shikha → Beni → drive to Pokhara','Trek complete via different route'],
+    ],
+    bookVal: 'Khopra Ridge & Khayer Lake Trek',
+    waMsg: 'I want to book the Khopra Ridge & Khayer Lake Trek!',
+  },
+};
+
+/* ---- MODAL LOGIC ---- */
+const overlay = document.getElementById('trek-modal-overlay');
+const modalEl = document.getElementById('trek-modal');
+let currentLbPhotos = [];
+let currentLbIdx = 0;
+
+function openModal(trekId) {
+  const t = TREKS[trekId];
+  if (!t) return;
+
+  // Hero
+  document.getElementById('modal-hero-img').src = t.heroImg;
+  document.getElementById('modal-hero-img').alt = t.name;
+  document.getElementById('modal-trek-title').textContent = t.name;
+  document.getElementById('modal-meta').innerHTML = `
+    <span>⏱ ${t.duration}</span>
+    <span>📈 ${t.difficulty}</span>
+    <span>🏔 ${t.altitude}</span>
+    <span>💰 ${t.price}</span>
+  `;
+
+  // Gallery (first 5 extra photos after hero)
+  const gallery = document.getElementById('modal-gallery');
+  gallery.innerHTML = '';
+  currentLbPhotos = t.photos;
+  t.photos.forEach((p, i) => {
+    const img = document.createElement('img');
+    img.src = p[0];
+    img.alt = p[1];
+    img.loading = 'lazy';
+    img.addEventListener('click', () => openLightbox(i));
+    gallery.appendChild(img);
+  });
+
+  // Description
+  document.getElementById('modal-desc').textContent = t.desc;
+
+  // Specs
+  document.getElementById('modal-specs').innerHTML = `
+    <div class="trek-spec"><div class="trek-spec__label">Duration</div><div class="trek-spec__val">${t.duration}</div></div>
+    <div class="trek-spec"><div class="trek-spec__label">Difficulty</div><div class="trek-spec__val">${t.difficulty}</div></div>
+    <div class="trek-spec"><div class="trek-spec__label">Max Altitude</div><div class="trek-spec__val">${t.altitude}</div></div>
+    <div class="trek-spec"><div class="trek-spec__label">Starting Price</div><div class="trek-spec__val">${t.price} / person</div></div>
+    <div class="trek-spec"><div class="trek-spec__label">Best Season</div><div class="trek-spec__val">${t.season}</div></div>
+    <div class="trek-spec"><div class="trek-spec__label">Group Size</div><div class="trek-spec__val">${t.groupSize}</div></div>
+  `;
+
+  // Highlights
+  document.getElementById('modal-highlights').innerHTML = t.highlights.map(h => `<div class="trek-hl-item">${h}</div>`).join('');
+
+  // Itinerary
+  document.getElementById('modal-itinerary').innerHTML = t.itinerary.map(([day, title, sub]) =>
+    `<div class="itin-day"><div class="itin-day__num">Day ${day}</div><div class="itin-day__text"><strong>${title}</strong>${sub ? sub : ''}</div></div>`
+  ).join('');
+
+  // Actions
+  const waMsg = encodeURIComponent(`Hello Nepal Trek Connect! ${t.waMsg}`);
+  const mailSubj = encodeURIComponent(`Trek Inquiry – ${t.name}`);
+  const mailBody = encodeURIComponent(`Hello Nepal Trek Connect,\n\nI am interested in the ${t.name} and would like more information about pricing, availability, and what's included.\n\nPlease contact me at your earliest convenience.\n\nThank you!`);
+  document.getElementById('modal-actions').innerHTML = `
+    <a href="contact.html?trek=${encodeURIComponent(t.bookVal)}" class="btn btn--primary btn--lg">📋 Book This Trek</a>
+    <a href="https://wa.me/9779846958184?text=${waMsg}" target="_blank" rel="noopener noreferrer" class="btn btn--dark btn--lg">💬 WhatsApp Now</a>
+    <a href="mailto:nepaltrekconnect@gmail.com?subject=${mailSubj}&body=${mailBody}" class="btn btn--outline" style="background:var(--clr-slate);color:var(--clr-offwhite)">✉️ Email Us</a>
+  `;
+
+  // Show
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  overlay.scrollTop = 0;
+
+  // Focus trap
+  setTimeout(() => document.getElementById('modal-close').focus(), 100);
+}
+
+function closeModal() {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Open on card click/enter
+document.querySelectorAll('.trek-card').forEach(card => {
+  card.addEventListener('click', () => openModal(card.dataset.trek));
+  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.trek); } });
+});
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeLightbox(); } });
+
+// Footer trek links
+document.querySelectorAll('[data-trek]').forEach(link => {
+  if (link.classList.contains('trek-card')) return;
+  link.addEventListener('click', e => { e.preventDefault(); openModal(link.dataset.trek); });
+});
+
+/* ---- LIGHTBOX ---- */
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lb-img');
+
+function openLightbox(idx) {
+  currentLbIdx = idx;
+  lbImg.src = currentLbPhotos[idx][0];
+  lbImg.alt = currentLbPhotos[idx][1];
+  lb.classList.add('open');
+}
+function closeLightbox() { lb.classList.remove('open'); }
+function lbNext() { currentLbIdx = (currentLbIdx + 1) % currentLbPhotos.length; lbImg.src = currentLbPhotos[currentLbIdx][0]; lbImg.alt = currentLbPhotos[currentLbIdx][1]; }
+function lbPrev() { currentLbIdx = (currentLbIdx - 1 + currentLbPhotos.length) % currentLbPhotos.length; lbImg.src = currentLbPhotos[currentLbIdx][0]; lbImg.alt = currentLbPhotos[currentLbIdx][1]; }
+
+document.getElementById('lb-close').addEventListener('click', closeLightbox);
+document.getElementById('lb-next').addEventListener('click', lbNext);
+document.getElementById('lb-prev').addEventListener('click', lbPrev);
+lb.addEventListener('click', e => { if (e.target === lb || e.target === lbImg) closeLightbox(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'ArrowRight') lbNext();
+  if (e.key === 'ArrowLeft') lbPrev();
+});
+</script>
 </body>
 </html>

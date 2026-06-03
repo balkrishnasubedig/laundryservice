@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nepal adventure activities from Pokhara – paragliding, kayaking, ziplining, Chitwan wildlife safari. Book with Nepal Trek Connect for the best experiences in Nepal.">
+  <meta name="keywords" content="paragliding Pokhara Nepal, kayaking Nepal, zipline Pokhara, Chitwan safari, Nepal adventure activities, Pokhara adventure tour">
+  <title>Nepal Adventures – Paragliding, Kayaking, Ziplining, Chitwan Safari | Nepal Trek Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .adv-hero { position: relative; min-height: 520px; display: flex; align-items: flex-end; overflow: hidden; }
+    .adv-hero__bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1540202404-a2f29016b523?w=1600&q=80') center/cover no-repeat; }
+    .adv-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,24,18,0.95) 0%, rgba(10,24,18,0.5) 60%, transparent 100%); }
+    .adv-hero__inner { position: relative; z-index: 1; padding: calc(var(--header-h) + 40px) 0 72px; width: 100%; }
+    .adv-hero h1 { font-family: var(--font-display); font-size: clamp(2.4rem,5vw,4rem); font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 16px; }
+    .adv-hero p { font-size: 1.1rem; color: rgba(255,255,255,0.75); max-width: 560px; line-height: 1.7; margin-bottom: 32px; }
+
+    /* Activity sections */
+    .adv-section { padding: 96px 0; }
+    .adv-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .adv-layout.reverse { direction: rtl; }
+    .adv-layout.reverse > * { direction: ltr; }
+    .adv-img-wrap { position: relative; border-radius: var(--radius-lg); overflow: hidden; }
+    .adv-img-wrap img { width: 100%; height: 420px; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .adv-img-wrap:hover img { transform: scale(1.04); }
+    .adv-badge-price { position: absolute; bottom: 20px; right: 20px; background: var(--clr-gold); color: #1a1200; padding: 10px 18px; border-radius: var(--radius-md); font-family: var(--font-mono); font-weight: 700; font-size: 0.85rem; letter-spacing:.04em; box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+    .adv-content h2 { font-family: var(--font-display); font-size: clamp(1.8rem,3vw,2.6rem); font-weight: 900; margin-bottom: 16px; line-height: 1.2; }
+    .adv-content p { color: var(--clr-muted); line-height: 1.8; margin-bottom: 20px; font-size: 0.97rem; }
+    .adv-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    .spec-item { background: var(--clr-offwhite); border-radius: var(--radius-sm); padding: 14px 16px; }
+    .spec-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing:.1em; text-transform: uppercase; color: var(--clr-muted); margin-bottom: 4px; }
+    .spec-val { font-weight: 700; font-size: 0.92rem; color: var(--clr-slate); }
+    .adv-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+
+    /* Gallery strip */
+    .adv-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 32px; }
+    .adv-gallery img { width: 100%; height: 140px; object-fit: cover; border-radius: var(--radius-sm); transition: transform 0.3s ease; cursor: pointer; }
+    .adv-gallery img:hover { transform: scale(1.04); }
+
+    /* Highlights list */
+    .highlights-list { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+    .highlight-item { display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; }
+    .highlight-item::before { content: '✓'; color: var(--clr-lime); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    @media(max-width:900px){ .adv-layout,.adv-layout.reverse{grid-template-columns:1fr;direction:ltr;gap:40px} .adv-gallery{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:600px){ .adv-specs{grid-template-columns:1fr} .adv-gallery{grid-template-columns:repeat(2,1fr)} }
+  </style>
+</head>
+<body>
+
+<header class="site-header transparent" role="banner">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo" aria-label="Nepal Trek Connect Home">
+        <span class="logo-icon" aria-hidden="true">⛰️</span>
+        <span>Nepal Trek Connect<span class="logo-sub">Lakeside · Pokhara</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="treks.html">Treks</a></li>
+        <li><a href="adventures.html" class="active" aria-current="page">Adventures</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn btn--primary btn--sm">Book Now</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<nav class="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+  <button class="close-menu" aria-label="Close">✕</button>
+  <a href="index.html">Home</a>
+  <a href="treks.html">Treks</a>
+  <a href="adventures.html">Adventures</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn--primary" style="margin-top:16px">Book Now</a>
+</nav>
+
+<main id="main-content">
+
+<!-- HERO -->
+<section class="adv-hero" aria-labelledby="adv-hero-heading">
+  <div class="adv-hero__bg" role="img" aria-label="Adventure activities in Nepal – paragliding over Pokhara valley"></div>
+  <div class="adv-hero__overlay" aria-hidden="true"></div>
+  <div class="adv-hero__inner container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span aria-current="page">Adventures</span>
+    </nav>
+    <span class="eyebrow eyebrow--gold">🏄 Adrenaline & Wonder</span>
+    <h1 id="adv-hero-heading">Nepal Adventure<br>Activities</h1>
+    <p>Beyond trekking — fly over the Himalayas, paddle sacred rivers, soar on a zipline above Pokhara, and discover wildlife in Chitwan's jungle. One country, infinite thrills.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="#paragliding" class="btn btn--primary btn--lg">Explore Activities</a>
+      <a href="contact.html" class="btn btn--outline btn--lg">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITY QUICK LINKS -->
+<nav class="trust-bar" aria-label="Activity navigation">
+  <div class="trust-inner">
+    <a href="#paragliding" class="trust-item" style="text-decoration:none;transition:color 0.2s"><span class="ti">🪂</span> Paragliding</a>
+    <a href="#kayaking" class="trust-item" style="text-decoration:none;transition:color 0.2s"><span class="ti">🛶</span> Kayaking</a>
+    <a href="#ziplining" class="trust-item" style="text-decoration:none;transition:color 0.2s"><span class="ti">🚠</span> Ziplining</a>
+    <a href="#chitwan" class="trust-item" style="text-decoration:none;transition:color 0.2s"><span class="ti">🦏</span> Chitwan Safari</a>
+  </div>
+</nav>
+
+<!-- ===================== PARAGLIDING ===================== -->
+<section id="paragliding" class="adv-section section--white" aria-labelledby="paragliding-heading">
+  <div class="container">
+    <div class="adv-layout">
+      <div class="adv-img-wrap fade-up">
+        <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?w=900&q=80"
+             alt="Tandem paragliding over Pokhara with Annapurna Himalayan range in background Nepal"
+             loading="lazy" width="900" height="420">
+        <div class="adv-badge-price">From $90 / person</div>
+      </div>
+      <div class="adv-content fade-up">
+        <span class="eyebrow">🪂 Paragliding</span>
+        <h2 id="paragliding-heading">Soar Above the Himalayas</h2>
+        <p>Take flight from Sarangkot Hill and glide over the legendary Pokhara valley with sweeping 360° views of Annapurna, Machhapuchhre (Fish Tail), and the sparkling Phewa Lake below. Our tandem paragliding sessions are run by certified CIVL-licensed pilots with thousands of flights' experience.</p>
+        <p>No experience required. Flights last 20–30 minutes and depart multiple times daily, weather permitting.</p>
+        <div class="adv-specs" role="list" aria-label="Activity details">
+          <div class="spec-item"><div class="spec-label">Duration</div><div class="spec-val">30–45 min total</div></div>
+          <div class="spec-item"><div class="spec-label">Flight Time</div><div class="spec-val">20–30 minutes</div></div>
+          <div class="spec-item"><div class="spec-label">Altitude</div><div class="spec-val">~1,600m launch</div></div>
+          <div class="spec-item"><div class="spec-label">Min. Age</div><div class="spec-val">5+ years</div></div>
+          <div class="spec-item"><div class="spec-label">Season</div><div class="spec-val">Year-round</div></div>
+          <div class="spec-item"><div class="spec-label">Price</div><div class="spec-val">From $90 USD</div></div>
+        </div>
+        <div class="highlights-list" role="list">
+          <div class="highlight-item">Certified CIVL-licensed tandem pilots</div>
+          <div class="highlight-item">GoPro video & photos available</div>
+          <div class="highlight-item">Hotel pickup & drop-off included</div>
+          <div class="highlight-item">Full safety briefing before flight</div>
+          <div class="highlight-item">Weight limit: 35–110kg</div>
+        </div>
+        <div class="adv-actions">
+          <a href="contact.html?trek=Paragliding" class="btn btn--primary btn--lg">Book Paragliding</a>
+          <a href="https://wa.me/9779846958184?text=Hello!%20I%20want%20to%20book%20paragliding%20in%20Pokhara." target="_blank" rel="noopener noreferrer" class="btn btn--dark btn--lg">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="adv-gallery fade-up" aria-label="Paragliding photo gallery">
+      <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=400&q=75" alt="Paraglider above Phewa Lake Pokhara" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1531986627054-7d61f699e14e?w=400&q=75" alt="Tandem paragliding Nepal mountains" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1595429035839-c99c298ffdde?w=400&q=75" alt="Paragliding launch Sarangkot Pokhara" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=75" alt="Himalayan panorama from paraglider Nepal" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== KAYAKING ===================== -->
+<section id="kayaking" class="adv-section section--offwhite" aria-labelledby="kayaking-heading">
+  <div class="container">
+    <div class="adv-layout reverse">
+      <div class="adv-img-wrap fade-up">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&q=80"
+             alt="Kayaking on Phewa Lake Pokhara with Annapurna mountain reflections Nepal"
+             loading="lazy" width="900" height="420">
+        <div class="adv-badge-price">From $45 / person</div>
+      </div>
+      <div class="adv-content fade-up">
+        <span class="eyebrow">🛶 Kayaking</span>
+        <h2 id="kayaking-heading">Paddle Sacred Waters</h2>
+        <p>Glide across the mirror-like surface of Phewa Lake with the reflection of the Annapurna range shimmering below your kayak. For the adventurous, we run guided white-water kayaking on the Seti Gandaki and Fewa rivers — with rapids ranging from Class II to Class IV.</p>
+        <p>Beginners are warmly welcome on the lake; experienced paddlers can challenge themselves on technical river sections with our professional instructors alongside.</p>
+        <div class="adv-specs">
+          <div class="spec-item"><div class="spec-label">Duration</div><div class="spec-val">Half or full day</div></div>
+          <div class="spec-item"><div class="spec-label">Difficulty</div><div class="spec-val">Easy → Advanced</div></div>
+          <div class="spec-item"><div class="spec-label">Location</div><div class="spec-val">Phewa Lake / Rivers</div></div>
+          <div class="spec-item"><div class="spec-label">Group Size</div><div class="spec-val">1–12 people</div></div>
+          <div class="spec-item"><div class="spec-label">Season</div><div class="spec-val">Oct–May (best)</div></div>
+          <div class="spec-item"><div class="spec-label">Price</div><div class="spec-val">From $45 USD</div></div>
+        </div>
+        <div class="highlights-list">
+          <div class="highlight-item">Lake kayaking & river kayaking options</div>
+          <div class="highlight-item">All safety equipment provided</div>
+          <div class="highlight-item">Certified kayaking instructors</div>
+          <div class="highlight-item">Sunrise paddle tours available</div>
+          <div class="highlight-item">No prior experience needed for lake</div>
+        </div>
+        <div class="adv-actions">
+          <a href="contact.html?trek=Kayaking" class="btn btn--primary btn--lg">Book Kayaking</a>
+          <a href="https://wa.me/9779846958184?text=Hello!%20I%20want%20to%20book%20kayaking%20in%20Pokhara." target="_blank" rel="noopener noreferrer" class="btn btn--dark btn--lg">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="adv-gallery fade-up">
+      <img src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?w=400&q=75" alt="Kayaking mountain lake reflections" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=400&q=75" alt="White water kayaking Nepal river" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=75" alt="Phewa Lake kayak sunrise Pokhara" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?w=400&q=75" alt="Group kayaking adventure Nepal" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ZIPLINING ===================== -->
+<section id="ziplining" class="adv-section section--white" aria-labelledby="ziplining-heading">
+  <div class="container">
+    <div class="adv-layout">
+      <div class="adv-img-wrap fade-up">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80"
+             alt="Ziplining above Pokhara valley with Himalayan mountain backdrop Nepal"
+             loading="lazy" width="900" height="420">
+        <div class="adv-badge-price">From $70 / person</div>
+      </div>
+      <div class="adv-content fade-up">
+        <span class="eyebrow">🚠 Ziplining</span>
+        <h2 id="ziplining-heading">Nepal's Most Thrilling Zipline</h2>
+        <p>The Pokhara zipline is one of Asia's longest and steepest — stretching over 1.8km at speeds up to 120km/h. You'll race Superman-style over terraced fields and dense forest canopy with the entire Annapurna Himalayan range as your backdrop. The adrenaline rush lasts seconds; the view is unforgettable.</p>
+        <p>The entire experience from platform briefing to landing takes about 1.5 hours and is suitable for all experience levels.</p>
+        <div class="adv-specs">
+          <div class="spec-item"><div class="spec-label">Line Length</div><div class="spec-val">1.8km</div></div>
+          <div class="spec-item"><div class="spec-label">Max Speed</div><div class="spec-val">120 km/h</div></div>
+          <div class="spec-item"><div class="spec-label">Height Drop</div><div class="spec-val">600m vertical</div></div>
+          <div class="spec-item"><div class="spec-label">Duration</div><div class="spec-val">~1.5 hours total</div></div>
+          <div class="spec-item"><div class="spec-label">Weight Limit</div><div class="spec-val">40–120 kg</div></div>
+          <div class="spec-item"><div class="spec-label">Price</div><div class="spec-val">From $70 USD</div></div>
+        </div>
+        <div class="highlights-list">
+          <div class="highlight-item">Asia's longest & steepest zipline</div>
+          <div class="highlight-item">Superman-style horizontal flying position</div>
+          <div class="highlight-item">Professional safety harness & equipment</div>
+          <div class="highlight-item">GoPro video recording available</div>
+          <div class="highlight-item">Transport from Lakeside included</div>
+        </div>
+        <div class="adv-actions">
+          <a href="contact.html?trek=Ziplining" class="btn btn--primary btn--lg">Book Ziplining</a>
+          <a href="https://wa.me/9779846958184?text=Hello!%20I%20want%20to%20book%20the%20zipline%20in%20Pokhara." target="_blank" rel="noopener noreferrer" class="btn btn--dark btn--lg">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="adv-gallery fade-up">
+      <img src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=400&q=75" alt="Zipline adventure over Nepal valley" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=75" alt="Forest canopy zipline Nepal" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=75" alt="High altitude zipline Pokhara Himalaya" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&q=75" alt="Valley view from zipline platform Nepal" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CHITWAN ===================== -->
+<section id="chitwan" class="adv-section section--forest" aria-labelledby="chitwan-heading">
+  <div class="container">
+    <div class="adv-layout reverse">
+      <div class="adv-img-wrap fade-up">
+        <img src="https://images.unsplash.com/photo-1574068468668-a05a11f871da?w=900&q=80"
+             alt="One-horned rhinoceros in Chitwan National Park Nepal jungle wildlife safari"
+             loading="lazy" width="900" height="420">
+        <div class="adv-badge-price">From $180 / person</div>
+      </div>
+      <div class="adv-content fade-up" style="color:var(--clr-offwhite)">
+        <span class="eyebrow eyebrow--gold">🦏 Chitwan Safari</span>
+        <h2 id="chitwan-heading" style="color:var(--clr-offwhite)">Into the Jungle Kingdom</h2>
+        <p style="color:rgba(245,242,235,0.75)">Chitwan National Park — a UNESCO World Heritage Site — is one of Asia's finest wildlife reserves. Home to one-horned rhinoceroses, Royal Bengal tigers, gharial crocodiles, Asian elephants, and over 500 bird species, it offers a thrilling counterpoint to the high mountains. Our 2–3 day safari packages include jeep safaris, canoe rides on the Rapti River, elephant bathing experiences, and Tharu cultural village visits.</p>
+        <div class="adv-specs" style="margin: 24px 0">
+          <div class="spec-item"><div class="spec-label">Duration</div><div class="spec-val">2–3 days</div></div>
+          <div class="spec-item"><div class="spec-label">Location</div><div class="spec-val">Chitwan National Park</div></div>
+          <div class="spec-item"><div class="spec-label">Season</div><div class="spec-val">Oct–June (best)</div></div>
+          <div class="spec-item"><div class="spec-label">Wildlife</div><div class="spec-val">Rhino, Tiger, Elephant</div></div>
+          <div class="spec-item"><div class="spec-label">From Pokhara</div><div class="spec-val">~4 hrs drive</div></div>
+          <div class="spec-item"><div class="spec-label">Price</div><div class="spec-val">From $180 USD</div></div>
+        </div>
+        <div class="highlights-list" style="color:rgba(245,242,235,0.85)">
+          <div class="highlight-item" style="color:rgba(245,242,235,0.85)">Jeep & foot safari in core park zone</div>
+          <div class="highlight-item" style="color:rgba(245,242,235,0.85)">Canoe ride on Rapti & Narayani rivers</div>
+          <div class="highlight-item" style="color:rgba(245,242,235,0.85)">Tharu cultural show & village walk</div>
+          <div class="highlight-item" style="color:rgba(245,242,235,0.85)">Elephant bathing experience</div>
+          <div class="highlight-item" style="color:rgba(245,242,235,0.85)">All meals & lodge accommodation included</div>
+          <div class="highlight-item" style="color:rgba(245,242,235,0.85)">UNESCO World Heritage Site</div>
+        </div>
+        <div class="adv-actions">
+          <a href="contact.html?trek=Chitwan Safari" class="btn btn--gold btn--lg">Book Chitwan Safari</a>
+          <a href="https://wa.me/9779846958184?text=Hello!%20I%20want%20to%20book%20the%20Chitwan%20wildlife%20safari." target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--lg">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="adv-gallery fade-up" style="margin-top:32px">
+      <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=400&q=75" alt="Tiger in Chitwan jungle Nepal" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1549366021-9f761d040a94?w=400&q=75" alt="Elephant in Nepal wildlife reserve" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1574068468668-a05a11f871da?w=400&q=75" alt="Rhino Chitwan National Park" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1602526432604-029a709e131b?w=400&q=75" alt="Canoe safari Rapti River Chitwan Nepal" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- MULTI-ACTIVITY CTA -->
+<section class="section section--offwhite" aria-label="Multi-activity packages">
+  <div class="container" style="text-align:center;max-width:700px">
+    <div class="fade-up">
+      <span class="eyebrow">🎒 Bundle & Save</span>
+      <h2 class="section-title">Combine Trek + Adventure</h2>
+      <p class="section-subtitle" style="margin:0 auto 32px">Most of our guests combine a Himalayan trek with at least one activity. We'll create the perfect multi-day itinerary that packs in the maximum adventure within your budget and timeframe.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn--primary btn--lg">Get Custom Package Quote</a>
+        <a href="https://wa.me/9779846958184?text=Hello!%20I%20want%20to%20combine%20a%20trek%20with%20an%20adventure%20activity." target="_blank" rel="noopener noreferrer" class="btn btn--dark btn--lg">💬 Ask on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon" aria-hidden="true">⛰️</span>
+          <span>Nepal Trek Connect<span class="logo-sub">Lakeside · Pokhara · Nepal</span></span>
+        </a>
+        <p>Your trusted partner for Himalayan trekking, paragliding, kayaking, ziplining and Chitwan wildlife safari from Lakeside, Pokhara.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/9779846958184" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">💬</a>
+          <a href="mailto:nepaltrekconnect@gmail.com" class="social-link" aria-label="Email">📧</a>
+          <a href="#" class="social-link" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Adventures</h4>
+        <ul class="footer-links">
+          <li><a href="#paragliding">🪂 Paragliding</a></li>
+          <li><a href="#kayaking">🛶 Kayaking</a></li>
+          <li><a href="#ziplining">🚠 Ziplining</a></li>
+          <li><a href="#chitwan">🦏 Chitwan Safari</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Treks</h4>
+        <ul class="footer-links">
+          <li><a href="treks.html">Everest Base Camp</a></li>
+          <li><a href="treks.html">Annapurna Circuit</a></li>
+          <li><a href="treks.html">Poon Hill Trek</a></li>
+          <li><a href="treks.html">All Trekking Routes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+9779846958184">📞 +977 984 695 8184</a></li>
+          <li><a href="mailto:nepaltrekconnect@gmail.com">✉️ nepaltrekconnect@gmail.com</a></li>
+          <li><a href="https://wa.me/9779846958184" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a></li>
+          <li><a href="contact.html">📋 Book Now</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Nepal Trek Connect. All rights reserved. | Lakeside, Pokhara, Nepal</p>
+      <p>Nepal Tourism Board Registered · Eco-Responsible Adventure Tourism</p>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY WHATSAPP (always visible) -->
+<a href="https://wa.me/9779846958184?text=Hello%20Nepal%20Trek%20Connect!%20I%20would%20like%20to%20enquire%20about%20your%20adventure%20packages."
+   target="_blank" rel="noopener noreferrer"
+   class="wa-sticky-btn"
+   aria-label="Chat on WhatsApp"
+   title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.478 2 2 6.478 2 11.999c0 1.906.506 3.692 1.385 5.234L2 22l4.893-1.363A9.935 9.935 0 0012 22c5.521 0 10-4.479 10-10.001C22 6.478 17.521 2 11.999 2zm.001 18.001a8 8 0 01-4.08-1.116l-.292-.173-3.026.843.844-3.025-.193-.305A7.987 7.987 0 014 12C4 7.582 7.582 4 12 4c4.42 0 8 3.581 8 7.999 0 4.42-3.58 8.002-8 8.002z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script src="app.js" defer></script>
+</body>
+</html>
