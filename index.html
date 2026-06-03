@@ -1,343 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience top-notch laundry services at Lakeside Laundry Service, Pokhara. We offer affordable, convenient, and efficient laundry solutions for locals and tourists. Fast turnaround time and quality cleaning for all your garments.">
-    <meta name="keywords" content="pokhara laundry near me pokhara, laundry service, Lakeside laundry, Pokhara laundry, wash and fold, dry cleaning, affordable laundry, laundry for tourists, laundry pickup and delivery, fabric care">
-    <title>Lakeside Laundry Service</title>
-    <link rel="icon" href="laundry-machine.png"type=image/png>
-    <link rel="stylesheet" href="hcss.css">
-    <link rel="stylesheet" href="blogstyle.css">
-    <script type="application/ld+json">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nepal Trek Connect – Expert-guided trekking packages, paragliding, kayaking, ziplining & Chitwan wildlife safari from Lakeside, Pokhara. Book your Himalayan adventure today.">
+  <meta name="keywords" content="Nepal trekking packages, best treks Nepal, Pokhara adventure tours, Annapurna Circuit trek, paragliding Pokhara, Chitwan wildlife safari, kayaking Nepal, zipline Pokhara, Nepal hiking tours">
+  <meta name="author" content="Nepal Trek Connect">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nepal Trek Connect | Best Treks & Adventures from Pokhara">
+  <meta property="og:description" content="Guided Himalayan treks, paragliding, kayaking, ziplining & Chitwan safari from Lakeside Pokhara. Expert local guides, best prices, unforgettable journeys.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80">
+  <meta property="og:url" content="https://nepaltrekconnect.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://nepaltrekconnect.com/">
+  <title>Nepal Trek Connect | Best Treks & Himalayan Adventures from Pokhara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Nepal Trek Connect",
+    "description": "Expert-guided trekking, paragliding, kayaking, ziplining and Chitwan wildlife safari packages from Lakeside, Pokhara, Nepal.",
+    "url": "https://nepaltrekconnect.com",
+    "telephone": ["+977-9846958184", "+977-9846076397"],
+    "email": "nepaltrekconnect@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lakeside",
+      "addressLocality": "Pokhara",
+      "addressRegion": "Gandaki Province",
+      "addressCountry": "NP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 28.2096,
+      "longitude": 83.9560
+    },
+    "openingHours": "Mo-Su 06:00-20:00",
+    "currenciesAccepted": "USD, EUR, NPR",
+    "paymentAccepted": "Cash, Credit Card",
+    "priceRange": "$$",
+    "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200&q=80",
+    "sameAs": [
+      "https://wa.me/9779846958184"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Nepal Adventure Packages",
+      "itemListElement": [
         {
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Lakeside Laundry Services",
-          "url": "https://balkrishnasubedi90.com.np",
-          "logo": "https://balkrishnasubedi90.com.np/logo.jpg",
-          "image": "https://balkrishnasubedi90.com.np/homepage-image.jpg",
-          "description": "Professional laundry services in Lakeside, Pokhara, offering dry cleaning, express service, and wash & fold.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Lakeside",
-            "addressLocality": "Pokhara",
-            "addressRegion": "Gandaki Province",
-            "addressCountry": "Nepal",
-            "postalCode": "33700"
-          },
-          "telephone": "+9779769497911",
-          "openingHours": "Mo-Su 07:00-21:00",
-          "priceRange": "$",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "28.2096",
-            "longitude": "83.9856"
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Annapurna Circuit Trek",
+            "description": "Classic 14-day Annapurna Circuit trek through diverse landscapes and high mountain passes.",
+            "touristType": ["Adventurer", "Hiker"]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Everest Base Camp Trek",
+            "description": "14-day classic Everest Base Camp trek to 5364m.",
+            "touristType": ["Adventurer", "Mountaineer"]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Paragliding Pokhara",
+            "description": "Tandem paragliding over Pokhara with Himalayan views.",
+            "touristType": ["Adventurer"]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "TouristTrip",
+            "name": "Chitwan Wildlife Safari",
+            "description": "2-3 day jungle safari in Chitwan National Park seeing rhinos, elephants and tigers.",
+            "touristType": ["Nature Lover", "Family"]
           }
         }
-        </script>
-        
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-        }
-
-        .title {
-            text-align: center;
-            background-color: #2196F3;
-            color: white;
-            padding: 15px;
-        }
-
-        nav {
-            background-color: #2196F3;
-            position: relative;
-        }
-
-        nav ul {
-            display: none; /* Hide menu by default */
-            flex-direction: column; /* Stack menu items vertically */
-            align-items: center;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 5px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #1976D2;
-        }
-
-        .hamburger {
-            display: flex;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 10px;
-            margin: 10px;
-        }
-
-        .bar {
-            height: 3px;
-            width: 30px;
-            background-color: white;
-            margin: 3px 0;
-            transition: 0.4s;
-        }
-
-        section {
-            padding: 20px;
-            margin: 10px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-info {
-            margin-top: 20px;
-        }
-
-        .whatsapp_float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-
-        .whatsapp_float img {
-            width: 80px;
-            height: auto;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        iframe {
-            width: 100%;
-            height: 450px;
-            border: 0;
-        }
-
-        /* Media query for mobile responsiveness */
-        @media (max-width: 768px) {
-            .title h1, .title h2 {
-                font-size: 1.5em;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hamburger {
-                display: flex; /* Show hamburger on smaller screens */
-            }
-
-            .whatsapp_float img {
-                width: 60px;
-            }
-
-            section {
-                padding: 15px;
-                margin: 5px;
-            }
-        }
-
-        @media (min-width: 768px) {
-            nav ul {
-                display: flex; /* Show menu items in a row on larger screens */
-                flex-direction: row;
-                justify-content: center;
-            }
-
-            nav ul {
-                display: flex; /* Show the menu items */
-            }
-
-            .hamburger {
-                display: none; /* Hide hamburger on larger screens */
-            }
-        }
-    </style>
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
 
-    <div class="title">
-        <header>
-            <h1>Welcome to Lakeside Laundry Service at Pokhara</h1>
-            <p>We offer 3-hour, 6-hour, 12-hour, and 24-hour services.</p>
-            <div class="num"><h2>Call Us at +9779769497911</h2></div>
-        </header>
-    </div>
-    
-    <nav>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="express.html">Pricing</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="map.html">Map</a></li>
-            <li><a href="blog.html">Blogs</a></li>
-        </ul>
-    </nav>    
-
-    <section id="about">
-        <h2>About Lakeside Laundry Service</h2>
-        <p>Your trusted laundry partner in Lakeside, Pokhara. We provide a full range of laundry services, including wash and fold, dry cleaning, and special fabric care. Our dedicated team ensures that your clothes are cleaned with the utmost care and attention.</p>
-    </section>
-
-    <section id="lakeside">
-        <img src="lobby1.png" alt="laundry near me pokhara laundry service, Lakeside laundry, Pokhara laundry, wash and fold, dry cleaning, affordable laundry, laundry for tourists, laundry pickup and delivery, fabric carelaundry partner in Lakeside, Pokhara.Lakeside Laundry Service lobby image 1Lakeside Laundry Service lobby image 1">
-        <img src="lobby2.png" alt="laundry near me pokhara laundry service, Lakeside laundry, Pokhara laundry, wash and fold, dry cleaning, affordable laundry, laundry for tourists, laundry pickup and delivery, fabric carelaundry partner in Lakeside, Pokhara.Lakeside Laundry Service lobby image 1Lakeside Laundry Service lobby image 2">
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Wash and Fold</li>
-            <li>Dry Cleaning</li>
-            <li>Ironing Services</li>
-            <li>Pickup and Delivery</li>
-            <li>Fabric Care for Delicate Items</li>
-        </ul>
-    </section>
-    
-<header>
-    <h1>Lakeside Laundry Blog</h1>
-    <p>Welcome to our blog! Here, you'll find all the latest articles and tips to keep your clothes fresh and clean. Learn more about how we care for your laundry and make it sustainable.</p>
+<!-- ============================================================
+     HEADER / NAVIGATION
+     ============================================================ -->
+<header class="site-header transparent" role="banner">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo" aria-label="Nepal Trek Connect Home">
+        <span class="logo-icon" aria-hidden="true">⛰️</span>
+        <span>
+          Nepal Trek Connect
+          <span class="logo-sub">Lakeside · Pokhara</span>
+        </span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="treks.html">Treks</a></li>
+        <li><a href="adventures.html">Adventures</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn btn--primary btn--sm">Book Now</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
 </header>
 
-<main>
-    <h2>Latest Blog Posts</h2>
-    <ul>
-        <li>
-            <a href="pokharalaundryblog1.html">Why Choose Lakeside Laundry Services?</a>
-            <p>Discover the unique benefits of using Lakeside Laundry Services for all your laundry needs. We prioritize quality, convenience, and eco-friendly practices.</p>
-        </li>
-        <li>
-            <a href="pokharalaundryblog2.html">How to Care for Delicate Fabrics: A Quick Guide</a>
-            <p>Learn the best methods to care for delicate fabrics like silk, wool, and lace to ensure they last longer and stay looking pristine.</p>
-        </li>
-        <li>
-            <a href="pokharalaundryblog3.html">Eco-Friendly Laundry Practices for a Greener Planet</a>
-            <p>Find out how small changes in your laundry routine can make a big difference for the environment. From energy-efficient machines to eco-friendly detergents, every step counts!</p>
-        </li>
-        <li>
-            <a href="pokharalaundryblog4.html">How to Care for Delicate Fabrics: A Quick Guide</a>
-                <p>Delicate fabrics require special care to maintain their beauty. Here's how to care for them at home or with our professional services.</p>
-        </li>
-        <li><a href="pokharalaundryblog5.html">Eco-Friendly Laundry Practices for a Greener Planet </a><p>Make small changes in your laundry routine that can have a big impact on the environment. Here are some green laundry tips.</p></li>
-        <li><a href="pokharalaundryblog6.html"> How to Handle Tough Stains and Odors</a><p>Dealing with tough stains and odors? Here are some tips to tackle them effectively and restore your clothes to their fresh state.</p>
-        </header></li>
-        <li><a href="pokharalaundryblog7.html">Laundry Tips for Busy Professionals</a> <p>Busy professional? Here are some laundry tips that will help you save time while keeping your clothes fresh and clean.</p></li>
-        <li><a href="pokharalaundryblog8.html">The Importance of Regular Laundry Maintenance</a> <p>Learn why keeping up with regular laundry maintenance can ensure your clothes last longer and stay in excellent condition.</p></li>
-        <li><a href="pokharalaundryblog9.html">Benefits of Using Eco-Friendly Detergents</a><p>Switching to eco-friendly detergents can help protect both the environment and the quality of your clothes. Here's why you should make the change.</p></li>
-        <li><a href="pokharalaundryblog10.html">The Best Laundry Practices for Summer Clothes</a>Summer clothes require special care to stay fresh and vibrant. Here are the best practices for keeping them in top condition.</li>
-    </ul>
-</main>
+<!-- Mobile Menu -->
+<nav class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+  <button class="close-menu" aria-label="Close mobile menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="treks.html">Treks</a>
+  <a href="adventures.html">Adventures</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn--primary" style="margin-top:16px">Book Now</a>
+</nav>
 
+<main id="main-content">
 
-
-            <h2>2. Removes Stubborn Stains</h2>
-            <p>Stains can be tough to get rid of, especially if left untreated. Our professional laundry services use specialized stain treatments to ensure your clothes come back looking pristine, even after tough stains like coffee, ink, or mud.</p>
-
-            <h2>3. Hygiene and Health</h2>
-            <p>Clean clothes are essential for maintaining good hygiene. Regular laundry washing removes dirt, bacteria, and allergens, which can affect your skin and overall health. At Lakeside Laundry, we use high-quality detergents and disinfectants to ensure your laundry is not only clean but hygienic as well.</p>
-
-            <h2>4. Saves Time</h2>
-            <p>Doing laundry at home can be time-consuming and tedious. By using our laundry services, you can save time and focus on more important tasks while we handle the laundry for you. Our quick turnaround time ensures you’ll have clean clothes when you need them.</p>
-
-            <h2>5. Convenience for Busy Schedules</h2>
-            <p>Living a busy life often means your laundry can pile up. At Lakeside Laundry Services, we offer pickup and delivery services for added convenience, ensuring your laundry is one less thing to worry about.</p>
-
-            <h2>Conclusion</h2>
-            <p>Regular laundry care isn’t just about cleanliness; it’s about maintaining the longevity of your clothes and ensuring your health and comfort. With Lakeside Laundry Services, you can count on fast, reliable, and professional service every time. Visit us today or contact us for more details about our services!</p>
-        </div>
-
-        <div class="author">
-            <p>Written by: Lakeside Laundry Services Team</p>
-        </div>
-
-        <div class="comments-section">
-            <h3>Leave a Comment</h3>
-            <form action="/submit-comment" method="post">
-                <textarea name="comment" placeholder="Leave your comment here..." rows="4" required></textarea>
-                <button type="submit">Post Comment</button>
-            </form>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>&copy;  Lakeside Laundry Services | All rights reserved.</p>
-</footer>
-    <section id="pricing">
-        <h2>Pricing</h2>
-        <p>We offer competitive prices for all our services. Check out our pricing page for detailed information on our laundry services and packages.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or need assistance, please fill out the form below to get in touch with us!</p>
-        
-        <form id="contact-form" action="mailto:buyandrenttrekkingitems@gmail.com" method="post" enctype="text/plain">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    
-        <div class="contact-info">
-            <p><strong>Phone:</strong> +9779769497911</p>
-            <p><strong>Email:</strong> hellolakesidelaundry@gmail.com</p>
-            <p><strong>Location:</strong> Lakeside, Pokhara, Nepal</p>
-        </div>
-    </section>
-
-    <div class="whatsapp_float">
-        <a href="https://wa.me/+9779769497911">
-            <img src="whatsappmetamarkzukerburg.png" alt="Contact us on WhatsApp">
+<!-- ============================================================
+     HERO SECTION
+     ============================================================ -->
+<section class="hero" aria-label="Hero – Nepal's finest adventure experiences">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg-img" role="img" aria-label="Dramatic Himalayan mountain landscape with trekking trail in Nepal"></div>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content container">
+    <div class="hero-inner">
+      <div class="hero-badge" aria-label="Trusted adventure company since 2010">
+        <span class="dot" aria-hidden="true"></span>
+        Trusted Since 2010 · Lakeside, Pokhara
+      </div>
+      <h1>
+        Discover Nepal's<br>
+        <em>Greatest Adventures</em>
+      </h1>
+      <p class="hero-desc">
+        Expert-guided Himalayan treks, heart-racing paragliding, white-water kayaking, thrilling ziplines & iconic Chitwan wildlife safaris. Your bucket-list journey starts here.
+      </p>
+      <div class="hero-actions">
+        <a href="treks.html" class="btn btn--primary btn--lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Explore Treks
         </a>
+        <a href="adventures.html" class="btn btn--outline btn--lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          View Adventures
+        </a>
+      </div>
+      <div class="hero-stats" role="list" aria-label="Our track record statistics">
+        <div class="hero-stat" role="listitem">
+          <span class="num">2,400+</span>
+          <span class="lbl">Happy Trekkers</span>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="num">15+</span>
+          <span class="lbl">Trek Routes</span>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="num">14yrs</span>
+          <span class="lbl">Experience</span>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="num">100%</span>
+          <span class="lbl">Safe Record</span>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d261.3276374598469!2d83.96485582631348!3d28.207568503916857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995955cf6b14d5d%3A0x3584c35c527e0785!2sLakeside%20laundry%20services!5e0!3m2!1sne!2snp!4v1730021448386!5m2!1sne!2snp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<!-- ============================================================
+     TRUST BAR
+     ============================================================ -->
+<div class="trust-bar" role="complementary" aria-label="Trust and certification badges">
+  <div class="trust-inner container">
+    <div class="trust-item"><span class="ti" aria-hidden="true">🏔️</span> Nepal Tourism Board Registered</div>
+    <div class="trust-item"><span class="ti" aria-hidden="true">🛡️</span> Fully Insured Guides</div>
+    <div class="trust-item"><span class="ti" aria-hidden="true">⭐</span> 4.9/5 Average Rating</div>
+    <div class="trust-item"><span class="ti" aria-hidden="true">🌿</span> Eco-Responsible Tourism</div>
+    <div class="trust-item"><span class="ti" aria-hidden="true">✅</span> Government Licensed</div>
+  </div>
+</div>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex'; // Toggle menu visibility
-        }
-    </script>
+<!-- ============================================================
+     MOST POPULAR TREKS
+     ============================================================ -->
+<section class="section section--offwhite" id="popular-treks" aria-labelledby="popular-treks-heading">
+  <div class="container">
+    <header class="section-header fade-up">
+      <span class="eyebrow">⛰️ Top Rated</span>
+      <h2 class="section-title" id="popular-treks-heading">Most Popular Treks in Nepal</h2>
+      <p class="section-subtitle">Our most sought-after Himalayan trekking experiences, carefully crafted for adventurers of all levels seeking the best treks Nepal has to offer.</p>
+    </header>
+    <div class="cards-grid" role="list" aria-label="Popular Nepal trekking packages">
+
+      <!-- Everest Base Camp -->
+      <article class="trek-card fade-up" role="listitem" itemscope itemtype="https://schema.org/TouristTrip">
+        <div class="trek-card__img">
+          <img src="https://images.unsplash.com/photo-1486911278844-a81c5267e227?w=600&q=75" 
+               alt="Everest Base Camp trek route with dramatic Himalayan peaks and Khumbu glacier Nepal" 
+               loading="lazy" width="600" height="400"
+               itemprop="image">
+          <div class="trek-card__badge"><span class="tag tag--gold">★ Most Popular</span></div>
+          <div class="trek-card__price">From $1,200</div>
+        </div>
+        <div class="trek-card__body">
+          <h3 class="trek-card__title" itemprop="name">Everest Base Camp Trek</h3>
+          <p class="trek-card__desc" itemprop="description">The world's most iconic trek to 5,364m. Walk in the footsteps of legends through Sherpa villages, rhododendron forests and the legendary Khumbu icefall.</p>
+          <ul class="trek-card__meta" role="list" aria-label="Trek details">
+            <li class="trek-card__meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              14 Days
+            </li>
+            <li class="trek-card__meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              Challenging
+            </li>
+            <li class="trek-card__meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              5,364m Peak
+            </li>
+          </ul>
+          <div class="trek-card__footer">
+            <a href="treks.html#ebc" class="btn btn--dark btn--sm" aria-label="View Everest Base Camp trek details">View Details</a>
+            <a href="contact.html?trek=ebc" class="btn btn--primary btn--sm">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Annapurna Circuit -->
+      <article class="trek-card fade-up" role="listitem" itemscope itemtype="https://schema.org/TouristTrip">
+        <div class="trek-card__img">
+          <img src="https://images.unsplash.com/photo-1569693281744-61b4e89b8b1c?w=600&q=75" 
+               alt="Annapurna Circuit trek through lush valley with snow capped mountains Nepal" 
+               loading="lazy" width="600" height="400"
+               itemprop="image">
+          <div class="trek-card__badge"><span class="tag">Classic Route</span></div>
+          <div class="trek-card__price">From $950</div>
+        </div>
+        <div class="trek-card__body">
+          <h3 class="trek-card__title" itemprop="name">Annapurna Circuit Trek</h3>
+          <p class="trek-card__desc" itemprop="description">One of the world's greatest treks circumnavigating the Annapurna massif, crossing the legendary Thorong La pass at 5,416m through diverse landscapes.</p>
+          <ul class="trek-card__meta" role="list">
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate-Hard</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>5,416m Pass</li>
+          </ul>
+          <div class="trek-card__footer">
+            <a href="treks.html#ac" class="btn btn--dark btn--sm">View Details</a>
+            <a href="contact.html?trek=annapurna-circuit" class="btn btn--primary btn--sm">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Annapurna Base Camp -->
+      <article class="trek-card fade-up" role="listitem" itemscope itemtype="https://schema.org/TouristTrip">
+        <div class="trek-card__img">
+          <img src="https://images.unsplash.com/photo-1585938389612-a552a28d6914?w=600&q=75" 
+               alt="Annapurna Base Camp amphitheater surrounded by towering Himalayan peaks at sunrise" 
+               loading="lazy" width="600" height="400"
+               itemprop="image">
+          <div class="trek-card__badge"><span class="tag">Best Views</span></div>
+          <div class="trek-card__price">From $750</div>
+        </div>
+        <div class="trek-card__body">
+          <h3 class="trek-card__title" itemprop="name">Annapurna Base Camp Trek</h3>
+          <p class="trek-card__desc" itemprop="description">Trek into the spectacular Annapurna Sanctuary to the base camp at 4,130m, surrounded by a breathtaking 360° amphitheater of towering Himalayan giants.</p>
+          <ul class="trek-card__meta" role="list">
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>10 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>4,130m</li>
+          </ul>
+          <div class="trek-card__footer">
+            <a href="treks.html#abc" class="btn btn--dark btn--sm">View Details</a>
+            <a href="contact.html?trek=abc" class="btn btn--primary btn--sm">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Poon Hill -->
+      <article class="trek-card fade-up" role="listitem" itemscope itemtype="https://schema.org/TouristTrip">
+        <div class="trek-card__img">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=75" 
+               alt="Poon Hill sunrise viewpoint over Annapurna and Dhaulagiri ranges Nepal trekking" 
+               loading="lazy" width="600" height="400"
+               itemprop="image">
+          <div class="trek-card__badge"><span class="tag">Best for Beginners</span></div>
+          <div class="trek-card__price">From $380</div>
+        </div>
+        <div class="trek-card__body">
+          <h3 class="trek-card__title" itemprop="name">Poon Hill Ghorepani Trek</h3>
+          <p class="trek-card__desc" itemprop="description">Nepal's most rewarding short trek. Watch a breathtaking sunrise over the Annapurna and Dhaulagiri ranges from Poon Hill (3,210m) – perfect for first-time Himalayan trekkers.</p>
+          <ul class="trek-card__meta" role="list">
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>5 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Easy-Moderate</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>3,210m</li>
+          </ul>
+          <div class="trek-card__footer">
+            <a href="treks.html#poon-hill" class="btn btn--dark btn--sm">View Details</a>
+            <a href="contact.html?trek=poon-hill" class="btn btn--primary btn--sm">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Manaslu Circuit -->
+      <article class="trek-card fade-up" role="listitem" itemscope itemtype="https://schema.org/TouristTrip">
+        <div class="trek-card__img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75" 
+               alt="Manaslu Circuit trek remote Himalayan trail with world eighth highest mountain Nepal" 
+               loading="lazy" width="600" height="400"
+               itemprop="image">
+          <div class="trek-card__badge"><span class="tag tag--gold">Off The Beaten Path</span></div>
+          <div class="trek-card__price">From $1,100</div>
+        </div>
+        <div class="trek-card__body">
+          <h3 class="trek-card__title" itemprop="name">Manaslu Circuit Trek</h3>
+          <p class="trek-card__desc" itemprop="description">Circumnavigate the world's 8th-highest mountain on this remote restricted-area trek. Unspoiled trails, ancient Tibetan-influenced villages and raw Himalayan wilderness.</p>
+          <ul class="trek-card__meta" role="list">
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>14 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Challenging</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>5,106m Pass</li>
+          </ul>
+          <div class="trek-card__footer">
+            <a href="treks.html#manaslu" class="btn btn--dark btn--sm">View Details</a>
+            <a href="contact.html?trek=manaslu" class="btn btn--primary btn--sm">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Langtang Valley -->
+      <article class="trek-card fade-up" role="listitem" itemscope itemtype="https://schema.org/TouristTrip">
+        <div class="trek-card__img">
+          <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=75" 
+               alt="Langtang Valley trek lush green valley with glaciers and Himalayan peaks near Kathmandu Nepal" 
+               loading="lazy" width="600" height="400"
+               itemprop="image">
+          <div class="trek-card__badge"><span class="tag">Near Kathmandu</span></div>
+          <div class="trek-card__price">From $580</div>
+        </div>
+        <div class="trek-card__body">
+          <h3 class="trek-card__title" itemprop="name">Langtang Valley Trek</h3>
+          <p class="trek-card__desc" itemprop="description">Called the "Valley of Glaciers," Langtang offers a stunning mix of pristine forests, Tamang culture, Cheese factories and dramatic high-altitude landscapes closest to Kathmandu.</p>
+          <ul class="trek-card__meta" role="list">
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 Days</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Moderate</li>
+            <li class="trek-card__meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>3,983m</li>
+          </ul>
+          <div class="trek-card__footer">
+            <a href="treks.html#langtang" class="btn btn--dark btn--sm">View Details</a>
+            <a href="contact.html?trek=langtang" class="btn btn--primary btn--sm">Book Now</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <div class="text-center mt-12 fade-up">
+      <a href="treks.html" class="btn btn--dark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        View All Trek Routes
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     OTHER ADVENTURES GRID
+     ============================================================ -->
+<section class="section section--white" id="adventures" aria-labelledby="adventures-heading">
+  <div class="container">
+    <header class="section-header fade-up">
+      <span class="eyebrow">⚡ Beyond Trekking</span>
+      <h2 class="section-title" id="adventures-heading">Other Thrilling Adventures</h2>
+      <p class="section-subtitle">Not just trekking — we offer Nepal's most exciting activities for every kind of adventurer seeking unforgettable experiences.</p>
+    </header>
+    <div class="cards-grid cards-grid--4" role="list" aria-label="Adventure activity options">
+
+      <a href="adventures.html#paragliding" class="adv-card fade-up" role="listitem" aria-label="Paragliding over Pokhara with Himalayan views">
+        <img src="https://images.unsplash.com/photo-1601024445121-e5b82f020549?w=600&q=75" 
+             alt="Adventure paragliding over Pokhara lake with Annapurna mountain range visible below" 
+             loading="lazy" width="600" height="400">
+        <div class="adv-card__overlay" aria-hidden="true"></div>
+        <div class="adv-card__content">
+          <div class="adv-card__icon" aria-hidden="true">🪂</div>
+          <div class="adv-card__title">Paragliding</div>
+          <div class="adv-card__sub">Pokhara · From $90</div>
+        </div>
+      </a>
+
+      <a href="adventures.html#kayaking" class="adv-card fade-up" role="listitem" aria-label="White water kayaking on Nepal rivers">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=75" 
+             alt="Kayaking adventure on Seti River Pokhara with turquoise blue water and jungle canyon Nepal" 
+             loading="lazy" width="600" height="400">
+        <div class="adv-card__overlay" aria-hidden="true"></div>
+        <div class="adv-card__content">
+          <div class="adv-card__icon" aria-hidden="true">🛶</div>
+          <div class="adv-card__title">Kayaking</div>
+          <div class="adv-card__sub">Seti River · From $45</div>
+        </div>
+      </a>
+
+      <a href="adventures.html#ziplining" class="adv-card fade-up" role="listitem" aria-label="Ziplining over Pokhara valley Nepal">
+        <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?w=600&q=75" 
+             alt="Ziplining over green Pokhara valley with dramatic Himalayan mountain backdrop Nepal" 
+             loading="lazy" width="600" height="400">
+        <div class="adv-card__overlay" aria-hidden="true"></div>
+        <div class="adv-card__content">
+          <div class="adv-card__icon" aria-hidden="true">🚡</div>
+          <div class="adv-card__title">Ziplining</div>
+          <div class="adv-card__sub">Pokhara · From $65</div>
+        </div>
+      </a>
+
+      <a href="adventures.html#chitwan" class="adv-card fade-up" role="listitem" aria-label="Chitwan National Park wildlife safari Nepal">
+        <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600&q=75" 
+             alt="One-horned rhinoceros in Chitwan National Park wildlife safari jungle tour Nepal" 
+             loading="lazy" width="600" height="400">
+        <div class="adv-card__overlay" aria-hidden="true"></div>
+        <div class="adv-card__content">
+          <div class="adv-card__icon" aria-hidden="true">🦏</div>
+          <div class="adv-card__title">Chitwan Safari</div>
+          <div class="adv-card__sub">National Park · From $120</div>
+        </div>
+      </a>
+
+    </div>
+    <div class="text-center mt-12 fade-up">
+      <a href="adventures.html" class="btn btn--primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Explore All Adventures
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY CHOOSE US
+     ============================================================ -->
+<section class="section section--forest" id="why-us" aria-labelledby="why-us-heading">
+  <div class="container">
+    <header class="section-header section-header--center fade-up">
+      <span class="eyebrow">🌟 Why Trek With Us</span>
+      <h2 class="section-title" id="why-us-heading" style="color:var(--clr-offwhite)">The Nepal Trek Connect Difference</h2>
+      <p class="section-subtitle" style="color:rgba(245,242,235,0.65);margin:0 auto;">14 years crafting life-changing Himalayan journeys with unmatched local expertise, safety standards, and genuine hospitality.</p>
+    </header>
+    <div class="features-grid fade-up">
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">🧭</div>
+        <div class="feature-title">Expert Local Guides</div>
+        <p class="feature-desc">All our guides are certified, experienced Nepali mountain professionals with deep knowledge of local culture, routes, and safety protocols.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">🛡️</div>
+        <div class="feature-title">Safety First Always</div>
+        <p class="feature-desc">Comprehensive safety briefings, quality equipment, emergency protocols, and full travel insurance support on every trip. Your safety is paramount.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">💰</div>
+        <div class="feature-title">Best Price Guarantee</div>
+        <p class="feature-desc">Transparent, competitive pricing with no hidden fees. We match or beat competitor quotes for identical services — guaranteed.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">🎒</div>
+        <div class="feature-title">Fully Customizable</div>
+        <p class="feature-desc">Every itinerary can be tailored to your fitness level, budget, and timeframe. Solo, couple, family, or group — we design your perfect trip.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">🌿</div>
+        <div class="feature-title">Responsible Tourism</div>
+        <p class="feature-desc">We operate with minimal environmental impact, support local teahouses and communities, and follow Leave No Trace principles on all routes.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon" aria-hidden="true">📞</div>
+        <div class="feature-title">24/7 Support</div>
+        <p class="feature-desc">Our team is reachable around the clock via WhatsApp, phone, and email. Pre-trip planning to post-trek memories — we're always here for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="section section--offwhite" id="reviews" aria-labelledby="reviews-heading">
+  <div class="container">
+    <header class="section-header section-header--center fade-up">
+      <span class="eyebrow">💬 Traveler Stories</span>
+      <h2 class="section-title" id="reviews-heading">What Our Trekkers Say</h2>
+      <p class="section-subtitle">Authentic experiences from adventurers who've trusted Nepal Trek Connect with their Himalayan journey.</p>
+    </header>
+    <div class="testimonials-grid fade-up" role="list" aria-label="Customer testimonials">
+      <article class="testimonial-card" role="listitem" itemscope itemtype="https://schema.org/Review">
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="testimonial-text" itemprop="reviewBody">"The Annapurna Circuit trek was the most incredible experience of my life. Our guide was knowledgeable, patient, and genuinely cared about our safety and enjoyment. Nepal Trek Connect took care of every detail perfectly."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">SM</div>
+          <div>
+            <div class="testimonial-name" itemprop="author">Sarah Mitchell</div>
+            <div class="testimonial-loc">🇬🇧 London, UK</div>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" role="listitem" itemscope itemtype="https://schema.org/Review">
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="testimonial-text" itemprop="reviewBody">"Paragliding over Pokhara with views of the Himalayas was simply unreal. The team at Nepal Trek Connect organized everything seamlessly. We also did the Chitwan safari — absolutely magical. Highly recommend!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">JK</div>
+          <div>
+            <div class="testimonial-name" itemprop="author">James Kowalski</div>
+            <div class="testimonial-loc">🇺🇸 New York, USA</div>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" role="listitem" itemscope itemtype="https://schema.org/Review">
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="testimonial-text" itemprop="reviewBody">"As a solo female traveler, I was apprehensive, but the team made me feel completely safe and welcomed from day one. The EBC trek was challenging but worth every step. I'll be back for the Manaslu Circuit!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">AL</div>
+          <div>
+            <div class="testimonial-name" itemprop="author">Akiko Lautrec</div>
+            <div class="testimonial-loc">🇫🇷 Paris, France</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LEAD CAPTURE FORM
+     ============================================================ -->
+<section class="section section--slate" id="book" aria-labelledby="booking-form-heading" style="background:var(--clr-slate)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:center" class="booking-layout">
+      <div class="fade-up">
+        <span class="eyebrow eyebrow--gold">📋 Get a Free Quote</span>
+        <h2 class="section-title" id="booking-form-heading" style="color:var(--clr-offwhite)">Start Planning Your <em style="color:var(--clr-lime);font-style:normal">Nepal Adventure</em></h2>
+        <p style="color:rgba(245,242,235,0.65);line-height:1.75;margin-bottom:32px;font-size:1rem">Fill in your details and our adventure specialists will reach out within 24 hours with a custom itinerary and transparent pricing. No commitment required.</p>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;align-items:center;gap:12px;color:rgba(245,242,235,0.75);font-size:0.9rem">
+            <span style="color:var(--clr-lime);font-size:1.1rem" aria-hidden="true">✓</span> Free personalized itinerary within 24hrs
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;color:rgba(245,242,235,0.75);font-size:0.9rem">
+            <span style="color:var(--clr-lime);font-size:1.1rem" aria-hidden="true">✓</span> No booking fees or hidden charges
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;color:rgba(245,242,235,0.75);font-size:0.9rem">
+            <span style="color:var(--clr-lime);font-size:1.1rem" aria-hidden="true">✓</span> Instant WhatsApp consultation available
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;color:rgba(245,242,235,0.75);font-size:0.9rem">
+            <span style="color:var(--clr-lime);font-size:1.1rem" aria-hidden="true">✓</span> Flexible payment plans accepted
+          </div>
+        </div>
+        <div style="margin-top:32px;padding:20px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.25);border-radius:12px">
+          <p style="font-size:0.82rem;color:rgba(245,242,235,0.55);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Prefer WhatsApp?</p>
+          <a href="https://wa.me/9779846958184" target="_blank" rel="noopener noreferrer" class="btn btn--primary" aria-label="Chat with us on WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.478 2 2 6.478 2 11.999c0 1.906.506 3.692 1.385 5.234L2 22l4.893-1.363A9.935 9.935 0 0012 22c5.521 0 10-4.479 10-10.001C22 6.478 17.521 2 11.999 2zm.001 18.001a8 8 0 01-4.08-1.116l-.292-.173-3.026.843.844-3.025-.193-.305A7.987 7.987 0 014 12C4 7.582 7.582 4 12 4c4.42 0 8 3.581 8 7.999 0 4.42-3.58 8.002-8 8.002z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="fade-up">
+        <div class="form-wrap form-wrap--dark">
+          <form data-form="booking" id="home-booking-form" novalidate aria-label="Booking inquiry form">
+            <div class="form-grid" style="margin-bottom:20px">
+              <div class="form-group">
+                <label for="name">Full Name <span aria-label="required" style="color:var(--clr-lime)">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span aria-label="required" style="color:var(--clr-lime)">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">WhatsApp / Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="activity">Interested In</label>
+                <select id="activity" name="activity">
+                  <option value="">Select activity…</option>
+                  <option value="Everest Base Camp Trek">EBC Trek</option>
+                  <option value="Annapurna Circuit Trek">Annapurna Circuit</option>
+                  <option value="Annapurna Base Camp Trek">Annapurna Base Camp</option>
+                  <option value="Poon Hill Trek">Poon Hill Trek</option>
+                  <option value="Manaslu Circuit Trek">Manaslu Circuit</option>
+                  <option value="Langtang Valley Trek">Langtang Valley</option>
+                  <option value="Paragliding">Paragliding</option>
+                  <option value="Kayaking">Kayaking</option>
+                  <option value="Ziplining">Ziplining</option>
+                  <option value="Chitwan Safari">Chitwan Safari</option>
+                  <option value="Multi-Activity Package">Multi-Activity Package</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="travel-date">Travel Date</label>
+                <input type="date" id="travel-date" name="travel_date">
+              </div>
+              <div class="form-group">
+                <label for="group-size">Group Size</label>
+                <select id="group-size" name="group_size">
+                  <option value="">Select…</option>
+                  <option value="Solo (1 person)">Solo (1 person)</option>
+                  <option value="Couple (2 people)">Couple (2)</option>
+                  <option value="Small group (3-5)">Small group (3–5)</option>
+                  <option value="Group (6-10)">Group (6–10)</option>
+                  <option value="Large group (10+)">Large group (10+)</option>
+                </select>
+              </div>
+              <div class="form-group form-grid--full">
+                <label for="message">Additional Requirements</label>
+                <textarea id="message" name="message" placeholder="Tell us about your fitness level, special requirements, budget, or any questions…" rows="3"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg" style="width:100%;justify-content:center">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Inquiry
+            </button>
+            <div class="form-success" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Nepal Trek Connect home">
+          <span class="logo-icon" aria-hidden="true">⛰️</span>
+          <span>Nepal Trek Connect<span class="logo-sub">Lakeside · Pokhara · Nepal</span></span>
+        </a>
+        <p>Your trusted partner for Himalayan trekking adventures, paragliding, kayaking, ziplining and Chitwan wildlife safaris. Making dreams come true since 2010.</p>
+        <div class="footer-social" role="list" aria-label="Social media links">
+          <a href="https://wa.me/9779846958184" target="_blank" rel="noopener noreferrer" class="social-link" role="listitem" aria-label="WhatsApp">💬</a>
+          <a href="mailto:nepaltrekconnect@gmail.com" class="social-link" role="listitem" aria-label="Email us">📧</a>
+          <a href="#" class="social-link" role="listitem" aria-label="Facebook">f</a>
+          <a href="#" class="social-link" role="listitem" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Our Treks</h4>
+        <ul class="footer-links">
+          <li><a href="treks.html#ebc">Everest Base Camp</a></li>
+          <li><a href="treks.html#ac">Annapurna Circuit</a></li>
+          <li><a href="treks.html#abc">Annapurna Base Camp</a></li>
+          <li><a href="treks.html#poon-hill">Poon Hill Trek</a></li>
+          <li><a href="treks.html#manaslu">Manaslu Circuit</a></li>
+          <li><a href="treks.html#langtang">Langtang Valley</a></li>
+          <li><a href="treks.html">All Trekking Routes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Adventures</h4>
+        <ul class="footer-links">
+          <li><a href="adventures.html#paragliding">Paragliding Pokhara</a></li>
+          <li><a href="adventures.html#kayaking">Kayaking Nepal</a></li>
+          <li><a href="adventures.html#ziplining">Zipline Pokhara</a></li>
+          <li><a href="adventures.html#chitwan">Chitwan Safari</a></li>
+          <li><a href="adventures.html">All Adventures</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+9779846958184">📞 +977 984 695 8184</a></li>
+          <li><a href="tel:+9779846076397">📞 +977 984 607 6397</a></li>
+          <li><a href="mailto:nepaltrekconnect@gmail.com">✉️ nepaltrekconnect@gmail.com</a></li>
+          <li><a href="https://wa.me/9779846958184" target="_blank" rel="noopener noreferrer">💬 WhatsApp Us</a></li>
+          <li><a href="contact.html">📋 Booking Form</a></li>
+        </ul>
+        <p style="margin-top:16px;font-size:0.8rem;line-height:1.6">📍 Lakeside, Pokhara<br>Gandaki Province, Nepal</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Nepal Trek Connect. All rights reserved. | Lakeside, Pokhara, Nepal</p>
+      <p>Nepal Tourism Board Registered · Eco-Responsible Adventure Tourism</p>
+      <p>Built with ❤️ for the mountains</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY FLOATING WIDGET
+     ============================================================ -->
+<div class="sticky-widget" role="complementary" aria-label="Quick contact options">
+  <div class="sticky-actions hidden" aria-label="Contact action buttons">
+    <a href="https://wa.me/9779846958184?text=Hello%20Nepal%20Trek%20Connect!%20I%20would%20like%20to%20enquire%20about%20your%20adventure%20packages."
+       target="_blank" rel="noopener noreferrer"
+       class="sticky-fab sticky-fab--whatsapp"
+       aria-label="Chat on WhatsApp"
+       title="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.478 2 2 6.478 2 11.999c0 1.906.506 3.692 1.385 5.234L2 22l4.893-1.363A9.935 9.935 0 0012 22c5.521 0 10-4.479 10-10.001C22 6.478 17.521 2 11.999 2zm.001 18.001a8 8 0 01-4.08-1.116l-.292-.173-3.026.843.844-3.025-.193-.305A7.987 7.987 0 014 12C4 7.582 7.582 4 12 4c4.42 0 8 3.581 8 7.999 0 4.42-3.58 8.002-8 8.002z"/></svg>
+      <span class="sticky-tooltip">Chat on WhatsApp</span>
+    </a>
+    <button class="sticky-fab sticky-fab--email" aria-label="Send quick email inquiry" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      <span class="sticky-tooltip">Quick Email</span>
+    </button>
+  </div>
+  <button class="sticky-fab sticky-fab--main" aria-label="Toggle contact options" aria-expanded="false" aria-controls="sticky-actions">✦</button>
+</div>
+
+<!-- Quick Email Form Popup -->
+<div class="quick-form-popup hidden" id="quick-form" role="dialog" aria-modal="true" aria-labelledby="quick-form-title">
+  <button class="close-popup" aria-label="Close quick contact form">✕</button>
+  <h4 id="quick-form-title">Quick Inquiry</h4>
+  <p>We'll respond within 2 hours!</p>
+  <form id="quick-contact-form" novalidate aria-label="Quick contact form">
+    <input type="text" name="qname" placeholder="Your name" autocomplete="name" required aria-label="Your name">
+    <input type="email" name="qemail" placeholder="your@email.com" autocomplete="email" required aria-label="Email address">
+    <textarea name="qmessage" placeholder="What adventure are you interested in?" rows="3" aria-label="Message"></textarea>
+    <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center">
+      Send Message
+    </button>
+    <div class="form-success" role="alert" aria-live="polite"></div>
+  </form>
+</div>
+
+<script src="app.js" defer></script>
+<style>
+@media(max-width:768px){
+  .booking-layout{grid-template-columns:1fr!important;gap:40px!important}
+}
+</style>
 </body>
 </html>
-
-
